@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>허재훈 | Backend Developer</title>
+  <meta
+    name="description"
+    content="허재훈 백엔드 개발자 포트폴리오. Java / Spring Boot 기반의 서비스 연동, 배치 자동화, 레거시 마이그레이션 경험을 소개합니다."
+  >
+  <meta name="theme-color" content="#f6f8fb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="허재훈 | Backend Developer">
+  <meta
+    property="og:description"
+    content="운영에서 발생하는 복잡한 문제를 자동화 가능한 백엔드 흐름으로 바꾸는 개발자 허재훈의 포트폴리오입니다."
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#intro" aria-label="허재훈 포트폴리오 첫 화면으로 이동">
+          <strong>허재훈</strong>
+          <span>Backend Developer</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="메뉴 열기"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="주요 섹션">
+          <a href="#intro">소개</a>
+          <a href="#strengths">강점</a>
+          <a href="#projects">프로젝트</a>
+          <a href="#skills">기술</a>
+          <a href="#career">경력</a>
+          <a href="#contact">연락처</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 소개 섹션: 지원 포지션에 맞춰 가장 자주 수정할 문구입니다. -->
+      <section class="section intro-section" id="intro">
+        <div class="container intro-grid">
+          <div class="intro-copy">
+            <p class="eyebrow">Java / Spring Boot · Service Integration · Batch Automation</p>
+            <h1>복잡한 운영 흐름을 단순하고 신뢰할 수 있는 서버 구조로 바꿉니다.</h1>
+            <p class="intro-description">
+              허재훈은 Java / Spring Boot 기반으로 백엔드 서비스를 개발해 온 서버 개발자입니다.
+              배치 작업의 동적 스케줄링, 데이터 수집·비교 자동화, 보고서 생성과 메일 발송 프로세스 구현,
+              그리고 서비스 간 연동이 많은 환경에서의 안정적인 기능 설계와 개발에 강점이 있습니다.
+            </p>
+            <p class="intro-description">
+              Python / Django 기반 운영 서비스 유지보수와 Java / Spring 기반 신규 개발과 마이그레이션을
+              모두 경험했습니다. 새로운 기능을 빠르게 만드는 것에 그치지 않고, 운영 중인 서비스의 제약을
+              이해한 상태에서 구조를 더 단순하고 예측 가능하게 정리하는 방식으로 일합니다.
+            </p>
+
+            <!-- 지원서용 강조 포인트: 경험의 나열보다 문제 해결 방식이 먼저 보이도록 구성했습니다. -->
+            <div class="application-note">
+              <p class="application-note-title">이 포트폴리오에서 바로 보실 수 있도록 정리한 내용</p>
+              <ul class="application-note-list">
+                <li>어떤 문제를 해결했는지</li>
+                <li>어떤 구조와 흐름으로 바꿨는지</li>
+                <li>그 결과 운영과 사용자 경험이 어떻게 달라졌는지</li>
+                <li>그 과정에서 무엇을 배웠는지</li>
+              </ul>
+            </div>
+
+            <div class="action-row">
+              <a class="button button-primary" href="#projects">대표 프로젝트 보기</a>
+              <button class="button button-secondary" id="copy-email" type="button">이메일 복사</button>
+            </div>
+
+            <ul class="highlight-list">
+              <li>20개 이상 고객사 대상 자동화 운영 경험</li>
+              <li>최대 1,000개 규모 자산 데이터 처리</li>
+              <li>보고서 생성 시간 10분 이상에서 1분 미만으로 개선</li>
+            </ul>
+          </div>
+
+          <aside class="profile-panel">
+            <section class="panel-card profile-card">
+              <p class="panel-title">Profile</p>
+              <h2>허재훈</h2>
+              <p class="profile-role">Backend Developer</p>
+
+              <!-- 연락처: 이메일, 전화번호, GitHub 주소를 수정할 때 함께 확인하면 됩니다. -->
+              <dl class="profile-list">
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:swdfrgt3701@naver.com">swdfrgt3701@naver.com</a></dd>
+                </div>
+                <div>
+                  <dt>Phone</dt>
+                  <dd><a href="tel:+821049183701">010-4918-3701</a></dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>서비스 연동, 배치 자동화, 운영 안정성 개선</dd>
+                </div>
+                <div>
+                  <dt>Current</dt>
+                  <dd>인더포레스트 · 개발팀 · 주임</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="panel-card metrics-card">
+              <p class="panel-title">Key Impact</p>
+              <ul class="metric-list">
+                <li>
+                  <strong>20+</strong>
+                  <span>실제 고객사 자동화 운영</span>
+                </li>
+                <li>
+                  <strong>1,000+</strong>
+                  <span>고객사별 최대 자산 처리 규모</span>
+                </li>
+                <li>
+                  <strong>Outbox / CDC</strong>
+                  <span>저장과 이벤트 전달 사이의 정합성 개선 경험</span>
+                </li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="strengths">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Strengths</p>
+            <h2>빠르게 읽히는 지원서를 위해, 제가 반복해서 해온 일을 세 가지로 정리했습니다.</h2>
+            <p class="section-description">
+              기능을 많이 만든 경험보다 어떤 문제를 어떤 방식으로 해결해 왔는지가 더 중요하다고 생각합니다.
+              실제 운영 환경에서 반복적으로 맡아온 역할을 기준으로 정리했습니다.
+            </p>
+          </div>
+
+          <div class="strength-grid">
+            <article class="info-card">
+              <h3>문제를 먼저 구조화합니다</h3>
+              <p>
+                운영 중인 서비스의 제약을 이해한 상태에서 문제를 잘게 나눕니다.
+                배치, 예약 점검, 보고서 생성, 메일 발송처럼 여러 단계가 이어지는 흐름도
+                하나의 시스템으로 보고 병목과 실패 지점을 정리합니다.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>복잡도를 낮추는 방향으로 설계합니다</h3>
+              <p>
+                API Server와 Batch Server를 분리하거나, CDC와 Redis를 도입하고,
+                Outbox Pattern으로 저장과 발행의 책임을 나누는 식으로
+                시스템이 더 단순하고 예측 가능하게 동작하도록 설계해 왔습니다.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>끝까지 운영 안정성을 챙깁니다</h3>
+              <p>
+                개선이 실제 사용자 경험과 운영 효율에 어떤 차이를 만드는지 중요하게 봅니다.
+                느린 보고서 생성 병목을 줄이고, 요청 유실 가능성을 낮추고,
+                중복 점검이 실행되지 않도록 흐름을 정리하는 일까지 책임지고 마무리했습니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 대표 프로젝트 섹션: 카드 하나를 복사해서 프로젝트를 추가해도 됩니다. -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>대표 프로젝트</h2>
+            <p class="section-description">
+              경험을 단순 나열하지 않고, 문제와 해결 방식, 결과, 배운 점이 빠르게 보이도록 정리했습니다.
+            </p>
+          </div>
+
+          <div class="project-stack">
+            <!-- 대표 프로젝트는 문제 / 해결 / 결과 / 배운 점 순서로 유지하면 수정하기 쉽습니다. -->
+            <article class="project-card project-card-featured">
+              <div class="project-header">
+                <div>
+                  <p class="project-period">2023.08 - 현재</p>
+                  <h3>Beekeeper</h3>
+                </div>
+                <p class="project-role">1인 개발 · 백엔드, 운영 화면, DB 스키마 설계</p>
+              </div>
+
+              <p class="project-summary">
+                SooJi.Bee 결과 데이터를 수집하고 Snapshot 기준으로 비교한 뒤,
+                정기 보고서 생성과 요약 메일 발송까지 자동화한 서비스입니다.
+              </p>
+
+              <div class="chip-row" aria-label="Beekeeper 기술 스택">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>JPA</span>
+                <span>MyBatis</span>
+                <span>MySQL</span>
+                <span>React.js</span>
+                <span>Jenkins</span>
+              </div>
+
+              <div class="project-detail-grid project-story-grid">
+                <section>
+                  <h4>문제</h4>
+                  <p>
+                    고객사별 결과 데이터를 주기적으로 수집하고 비교해 보고서와 메일로 전달하는 과정이
+                    반복적이었고, 기존 서비스만으로는 비교와 확인 업무를 충분히 지원하기 어려웠습니다.
+                    보고서 생성 시간도 길어 사용자가 기다려야 했습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>해결</h4>
+                  <p>
+                    API Server와 Batch Server를 분리해 장시간 실행되는 작업을 배치로 이관했고,
+                    사용자 설정 기반 동적 스케줄링으로 수집, 비교, 주간 상세·요약 보고서 생성,
+                    메일 발송까지 자동화했습니다. 사내 타 서비스와의 API 연동도 추가했습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>결과</h4>
+                  <p>
+                    약 20개 고객사를 대상으로 주 1~2회 자동화 운영이 가능해졌고,
+                    고객사별 최대 약 1,000개 자산 데이터를 처리했습니다.
+                    Excel 생성 병목을 개선해 10분 이상 걸리던 작업을 1분 미만으로 줄였습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>배운 점</h4>
+                  <p>
+                    사용자가 기다리는 요청 흐름 안에 장시간 작업을 두지 않는 것이 중요하다는 점,
+                    그리고 익숙한 문서 생성 로직도 병목을 계측하면 큰 폭으로 개선할 수 있다는 점을 배웠습니다.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <article class="project-card project-card-featured">
+              <div class="project-header">
+                <div>
+                  <p class="project-period">2024.02 - 현재</p>
+                  <h3>SooJi.Bee 2.0</h3>
+                </div>
+                <p class="project-role">Backend Developer · BE 3명 / FE 2명</p>
+              </div>
+
+              <p class="project-summary">
+                기존 Python / Django 기반 ASM 솔루션을 Java / Spring 기반 구조로 고도화하면서,
+                서비스 간 연동 로직과 점검 실행 구조를 재설계한 프로젝트입니다.
+              </p>
+
+              <div class="chip-row" aria-label="SooJi.Bee 2.0 기술 스택">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Kafka</span>
+                <span>Redis</span>
+                <span>JPA</span>
+                <span>MyBatis</span>
+                <span>MySQL</span>
+              </div>
+
+              <div class="project-detail-grid project-story-grid">
+                <section>
+                  <h4>문제</h4>
+                  <p>
+                    DB 저장 상태와 Kafka 발행 상태가 어긋날 수 있었고, 서비스별로 데이터 저장소가 분리돼 있어
+                    연계 조회가 복잡했습니다. 대용량 점검 결과 전송 과정에서는 메모리 이슈도 있었습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>해결</h4>
+                  <p>
+                    Outbox Pattern을 도입해 저장과 발행의 책임 경계를 분명히 했고,
+                    CDC로 필요한 조회 모델을 따로 구성했습니다.
+                    또한 대용량 결과는 Redis에 저장하고 Key만 전달하도록 바꿨으며,
+                    30초 polling 대신 스케줄 기반 예약 점검 구조를 구현했습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>결과</h4>
+                  <p>
+                    요청 유실 가능성을 줄이고, 서비스 간 연계 조회를 단순화했으며,
+                    대용량 전송 과정의 메모리 부담을 완화했습니다.
+                    중복 점검이 실행되지 않도록 흐름을 개편해 운영 안정성도 높였습니다.
+                  </p>
+                </section>
+                <section>
+                  <h4>배운 점</h4>
+                  <p>
+                    연동이 많은 시스템에서는 비동기 처리 자체보다 실패 복구 경로와 조회 모델까지 함께 설계해야
+                    운영 안정성이 높아진다는 점을 배웠습니다.
+                  </p>
+                </section>
+              </div>
+            </article>
+
+            <div class="project-grid">
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <p class="project-period">2023.05 - 현재</p>
+                    <h3>SooJi.Bee</h3>
+                  </div>
+                  <p class="project-role">Backend Developer</p>
+                </div>
+
+                <p class="project-summary">
+                  공격표면관리(ASM) 및 취약점 진단 기능을 제공하는 기존 운영 서비스입니다.
+                </p>
+
+                <div class="chip-row">
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>PostgreSQL</span>
+                  <span>Kafka</span>
+                  <span>Redis</span>
+                  <span>Docker Compose</span>
+                </div>
+
+                <ul>
+                  <li>운영 중인 Django 기반 서비스의 유지보수와 신규 기능 개발을 수행했습니다.</li>
+                  <li>비동기 작업 및 예약 점검 실행 시 DB 연결 검증 로직을 추가해 실행 안정성을 높였습니다.</li>
+                  <li>대용량 점검 결과 저장 시 bulk 처리 방식을 적용해 오류를 줄이고 저장 효율을 개선했습니다.</li>
+                </ul>
+              </article>
+
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <p class="project-period">2023.06 - 현재 · Side Project</p>
+                    <h3>술닥술닥</h3>
+                  </div>
+                  <p class="project-role">Backend Developer · 11인 프로젝트</p>
+                </div>
+
+                <p class="project-summary">
+                  사용자 취향 기반 술 추천과 모임 생성·참여 기능을 제공하는 주류 커뮤니티 서비스입니다.
+                </p>
+
+                <div class="chip-row">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>RabbitMQ</span>
+                  <span>Redis</span>
+                  <span>MySQL</span>
+                  <span>Docker Compose</span>
+                </div>
+
+                <ul>
+                  <li>멀티 모듈 구조로 API, Batch, Alarm, Back Office 서버와 DB를 설계·개발했습니다.</li>
+                  <li>추천 기능, 모임 생성/참여, OAuth 2.0 로그인, Firebase 푸시 알림을 구현했습니다.</li>
+                  <li>iOS 및 Android 앱 배포, 약 60명의 사용자와 312개의 술 데이터를 확보했습니다.</li>
+                </ul>
+              </article>
+
+              <article class="project-card">
+                <div class="project-header">
+                  <div>
+                    <p class="project-period">2024.02 - 2025.12</p>
+                    <h3>V-Portal</h3>
+                  </div>
+                  <p class="project-role">1인 개발 · 백엔드 중심</p>
+                </div>
+
+                <p class="project-summary">
+                  점검 요청, 담당자 배정, 보고서 등록, 이행 이력 관리를 지원하는 서비스입니다.
+                </p>
+
+                <div class="chip-row">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>Oracle</span>
+                  <span>JPA</span>
+                  <span>MyBatis</span>
+                  <span>React.js</span>
+                </div>
+
+                <ul>
+                  <li>외부 SI 업체에서 진행하던 프로젝트를 인수받아 요구사항과 구현 상태를 재정리했습니다.</li>
+                  <li>SSO 연동과 Oracle 기반 DB 스키마 설계, 주요 점검 요청 플로우 구현을 맡았습니다.</li>
+                  <li>미완료 기능을 보완해 서비스 완성도를 높이고 실제 운영 가능한 수준으로 안정화했습니다.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 기술 스택은 너무 많게 나열하기보다 실제 사용하는 기술 위주로 유지하는 편이 좋습니다. -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Technical Skills</p>
+            <h2>기술 스택</h2>
+            <p class="section-description">
+              문제 해결에 자주 활용한 기술을 중심으로 정리했습니다.
+            </p>
+          </div>
+
+          <div class="skill-grid">
+            <article class="info-card">
+              <h3>Languages</h3>
+              <div class="chip-row">
+                <span>Java</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>Frameworks & Libraries</h3>
+              <div class="chip-row">
+                <span>Spring Boot</span>
+                <span>JPA</span>
+                <span>MyBatis</span>
+                <span>Spring Cloud Gateway</span>
+                <span>Spring Quartz</span>
+                <span>Django</span>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>Messaging / Cache</h3>
+              <div class="chip-row">
+                <span>Kafka</span>
+                <span>RabbitMQ</span>
+                <span>Redis</span>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>Databases</h3>
+              <div class="chip-row">
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+                <span>Oracle</span>
+                <span>MongoDB</span>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>DevOps / Tools</h3>
+              <div class="chip-row">
+                <span>Docker</span>
+                <span>Jenkins</span>
+                <span>Git</span>
+                <span>Swagger / OpenAPI</span>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>Collaboration / Testing</h3>
+              <div class="chip-row">
+                <span>Jira</span>
+                <span>Notion</span>
+                <span>Confluence</span>
+                <span>JUnit</span>
+                <span>ArchUnit</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="career">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Career</p>
+            <h2>경력과 배경</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-period">2023.05 - 현재</p>
+              <div class="timeline-content">
+                <h3>인더포레스트 · 개발팀 · 주임</h3>
+                <p>
+                  공격표면관리(ASM) 솔루션과 취약점 진단 서비스를 제공하는 회사에서
+                  Python / Django 기반 운영 서비스 유지보수와 Java / Spring 기반 신규 서비스 개발,
+                  마이그레이션을 수행하고 있습니다.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-period">Education</p>
+              <div class="timeline-content">
+                <h3>학점은행제 컴퓨터공학과 졸업</h3>
+                <p>실무 중심의 개발 경험과 함께 컴퓨터공학 전공 과정을 이수했습니다.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-period">Certification</p>
+              <div class="timeline-content">
+                <h3>정보처리기사</h3>
+                <p>취득일: 2023.06</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>복잡한 운영과 연동 문제를 함께 풀 팀을 찾고 있습니다.</h2>
+              <p class="section-description">
+                배치 자동화, 서비스 연동, 레거시 마이그레이션, 운영 안정성 개선이 필요한 환경에서
+                강점을 발휘할 수 있습니다.
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a class="button button-primary" href="mailto:swdfrgt3701@naver.com">swdfrgt3701@naver.com</a>
+              <a class="button button-secondary" href="tel:+821049183701">010-4918-3701</a>
+              <a class="button button-ghost is-disabled" href="#contact" data-github-link>GitHub 연결 예정</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="current-year"></span> Heo Jae Hoon</p>
+        <p>Built for GitHub Pages</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
