@@ -13,6 +13,7 @@ const navLinks = [...document.querySelectorAll(".site-nav a")];
 const copyEmailButton = document.getElementById("copy-email");
 const githubLink = document.querySelector("[data-github-link]");
 const currentYear = document.getElementById("current-year");
+const projectExpanders = [...document.querySelectorAll("[data-project-expand]")];
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
@@ -102,3 +103,20 @@ if (copyEmailButton) {
     }, 1800);
   });
 }
+
+// 대표 프로젝트의 추가 설명을 접고 펼치는 버튼
+projectExpanders.forEach((expander) => {
+  const button = expander.querySelector(".project-expand-button");
+  const panel = expander.querySelector(".project-expand-panel");
+
+  if (!button || !panel) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    panel.setAttribute("aria-hidden", String(isOpen));
+    expander.classList.toggle("is-open", !isOpen);
+  });
+});
