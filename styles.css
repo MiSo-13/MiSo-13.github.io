@@ -64,7 +64,7 @@ button {
 .section {
   position: relative;
   z-index: 1;
-  padding: 80px 0;
+  padding: 58px 0;
   scroll-margin-top: 92px;
 }
 
@@ -170,13 +170,14 @@ button {
 }
 
 .intro-section {
-  padding-top: 64px;
+  padding-top: 48px;
+  padding-bottom: 28px;
 }
 
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
-  gap: 36px;
+  gap: 28px;
   align-items: start;
 }
 
@@ -198,8 +199,8 @@ button {
 }
 
 .intro-copy h1 {
-  max-width: 13ch;
-  font-size: clamp(2.6rem, 5.8vw, 4.4rem);
+  max-width: 15ch;
+  font-size: clamp(2.35rem, 5vw, 4rem);
   line-height: 1.16;
 }
 
@@ -216,34 +217,12 @@ button {
 
 .intro-description {
   max-width: 64ch;
-  margin: 24px 0 0;
-}
-
-.application-note {
-  margin-top: 24px;
-  padding: 20px 22px;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.application-note-title {
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.application-note-list {
-  margin: 12px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.9;
+  margin: 18px 0 0;
 }
 
 .action-row,
 .contact-actions {
-  margin-top: 28px;
+  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -257,7 +236,10 @@ button {
   padding: 0 20px;
   border-radius: 10px;
   font-weight: 600;
-  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .button:hover {
@@ -285,13 +267,6 @@ button {
   pointer-events: none;
 }
 
-.highlight-list {
-  margin: 28px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.9;
-}
-
 .profile-panel {
   display: grid;
   gap: 18px;
@@ -315,7 +290,6 @@ button {
 }
 
 .profile-card,
-.metrics-card,
 .contact-card {
   background: rgba(255, 255, 255, 0.82);
 }
@@ -366,6 +340,16 @@ button {
   line-height: 1.6;
 }
 
+.profile-impact {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-impact .panel-title {
+  margin-bottom: 10px;
+}
+
 .metric-list {
   margin: 0;
   padding: 0;
@@ -398,9 +382,15 @@ button {
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: 32px;
-  padding-bottom: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
+}
+
+.section-heading-compact {
+  max-width: none;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
 }
 
 .section-heading h2,
@@ -412,15 +402,21 @@ button {
   margin-top: 16px;
 }
 
-.strength-grid,
+.core-grid,
 .skill-grid,
 .project-grid {
   display: grid;
   gap: 18px;
 }
 
-.strength-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.core-section {
+  padding-top: 0;
+  padding-bottom: 36px;
+}
+
+.core-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .skill-grid {
@@ -444,13 +440,34 @@ button {
   margin: 14px 0 0;
 }
 
+.core-card {
+  padding: 20px 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.core-card h3 {
+  font-size: 1.05rem;
+}
+
+.core-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 .project-stack {
   display: grid;
-  gap: 18px;
+  gap: 14px;
+}
+
+.project-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfdfb 100%);
+  border-color: #dddcd3;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
 }
 
 .project-card-featured {
-  border-top: 2px solid var(--accent);
+  border-top: 3px solid var(--accent);
 }
 
 .project-header {
@@ -469,14 +486,55 @@ button {
   margin: 0;
   padding: 8px 12px;
   border-radius: 999px;
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--subtle);
+  background: var(--accent-soft);
+  border: 1px solid rgba(53, 91, 79, 0.12);
+  color: var(--accent-strong);
   font-weight: 600;
 }
 
 .project-summary {
   margin: 18px 0 0;
+}
+
+.project-overview-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-overview-item {
+  padding: 16px 18px;
+  border: 1px solid #e6e4db;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.project-overview-item.is-wide {
+  grid-column: 1 / -1;
+}
+
+.project-overview-item h4 {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.project-overview-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.project-overview-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.project-overview-list li + li {
+  margin-top: 6px;
 }
 
 .chip-row {
@@ -489,8 +547,8 @@ button {
 .chip-row span {
   padding: 8px 11px;
   border-radius: 999px;
-  background: transparent;
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0ded4;
   color: var(--muted);
   font-size: 0.93rem;
 }
@@ -504,10 +562,14 @@ button {
 
 .project-story-grid section {
   padding: 18px 18px 16px;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--line);
+  border: 1px solid #e5e3d9;
+  border-left: 3px solid rgba(53, 91, 79, 0.25);
   border-radius: 12px;
-  background: var(--surface-soft);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.project-story-grid-expanded {
+  margin-top: 0;
 }
 
 .project-detail-grid h4 {
@@ -523,7 +585,7 @@ button {
 
 .project-expand {
   margin-top: 18px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid #e3e1d7;
   padding-top: 16px;
 }
 
@@ -545,7 +607,9 @@ button {
   color: var(--subtle);
   font-size: 1.2rem;
   line-height: 1;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .project-expand.is-open .project-expand-button::after {
@@ -587,9 +651,9 @@ button {
 
 .project-expand-section {
   padding: 16px 18px;
-  border: 1px solid var(--line);
+  border: 1px solid #e5e3d9;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .project-expand-section-diagram {
@@ -646,7 +710,11 @@ button {
   border: 1px dashed #c9cec6;
   border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(243, 243, 239, 0.86)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.94),
+      rgba(243, 243, 239, 0.86)
+    ),
     repeating-linear-gradient(
       -45deg,
       rgba(89, 99, 110, 0.03),
@@ -704,7 +772,10 @@ button {
   background: rgba(255, 255, 255, 0.85);
   color: var(--text);
   font-weight: 500;
-  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .project-link:hover {
@@ -725,7 +796,11 @@ button {
   border: 1px dashed #c9cec6;
   border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(243, 243, 239, 0.85)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(243, 243, 239, 0.85)
+    ),
     repeating-linear-gradient(
       -45deg,
       rgba(89, 99, 110, 0.03),
@@ -821,10 +896,14 @@ button {
   .contact-card,
   .timeline-item,
   .project-detail-grid,
+  .project-overview-grid,
   .project-grid,
-  .skill-grid,
-  .strength-grid {
+  .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .core-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline-item {
@@ -874,7 +953,7 @@ button {
   }
 
   .section {
-    padding: 68px 0;
+    padding: 54px 0;
   }
 
   .intro-copy h1 {
@@ -909,6 +988,10 @@ button {
 
   .button {
     width: 100%;
+  }
+
+  .core-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {

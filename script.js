@@ -4,7 +4,7 @@ const portfolioConfig = {
   githubLabel: "GitHub"
 };
 
-const sectionIds = ["intro", "strengths", "projects", "skills", "career", "contact"];
+const sectionIds = ["intro", "core", "projects", "skills", "career", "contact"];
 
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
