@@ -706,8 +706,10 @@ button {
   min-height: 220px;
   padding: 18px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
   border: 1px dashed #c9cec6;
   border-radius: 12px;
   background:
@@ -723,6 +725,19 @@ button {
       rgba(89, 99, 110, 0.01) 10px,
       rgba(89, 99, 110, 0.01) 20px
     );
+}
+
+.project-shot-frame img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 190px);
+  max-height: 420px;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid #d8ddd4;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  object-fit: contain;
 }
 
 .project-shot-label {

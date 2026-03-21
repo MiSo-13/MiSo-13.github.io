@@ -223,7 +223,7 @@
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      기존 솔루션에서는 제한적이였던 데이터 비교 분석 및 보고서 생성, 메일 자동 발송까지 구현해서 전체적인 솔루션의 완성도를 높혔고, 운영팀의 업무 효율도 높일 수 있었습니다.
+                      기존 솔루션에서는 제한적이였던 데이터 비교 분석 및<br />보고서 생성, 메일 자동 발송까지 구현해서 전체적인 솔루션의 완성도를 높혔고, 운영팀의 업무 효율도 높일 수 있었습니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
@@ -292,8 +292,8 @@
                               발송까지 처리할 수 있는 기능이 필요했습니다.<br />
                               하지만 기존 솔루션에는 데이터 비교와 보고서 생성
                               기능이 없어 운영팀이 반복적인 데이터 비교와 메일 발송
-                              업무를 수작업으로 처리해야 했고,<br />고객사
-                              요청에 대응하는 과정도 비효율적이었습니다.
+                              업무를 수작업으로 처리해야 했고,<br />이에 따라, 고객사
+                              요청에 대응하는 시간도 지연될 수 밖에 없었습니다.
                             </p>
                           </section>
                           <section>
@@ -304,7 +304,7 @@
                               최소화했습니다.<br />또한 API Server와 Batch
                               Server를 분리해 오래 걸리는 보고서 생성 작업을
                               비동기로 처리하고,<br />동적 스케줄링을 적용해
-                              데이터 수집, 비교, 보고서 생성, 메일 발송까지 한
+                              데이터 수집 · 비교 · 보고서 생성 · 메일 발송까지 한
                               흐름으로 자동화했습니다.
                             </p>
                           </section>
@@ -318,9 +318,7 @@
                               개선되었고, 약 20개 고객사를 대상으로 주 1회
                               데이터 수집, 비교, 보고서 생성, 메일 발송
                               일정을<br />
-                              자동화할 수 있었습니다. 또한 Excel 보고서 생성
-                              병목을 개선해 10분 이상 걸리던 작업을 1분 이하로
-                              단축했습니다.
+                              자동화할 수 있었습니다.
                             </p>
                           </section>
                           <section>
@@ -341,7 +339,7 @@
                               </li>
                               <li>
                                 대용량 데이터를 다루는 기능에서는 저장, 비교,
-                                보고서 생성 전 과정에서 병목 지점을 구체적으로
+                                보고서 생성의 전 과정에서 병목 지점을 구체적으로
                                 확인해야 했고,<br />서비스 연동 구조를 검토하고
                                 적절한 디자인 패턴을 적용하는 과정이 성능 개선에
                                 직접적인 도움이 됐습니다.
@@ -381,11 +379,11 @@
                             <ul class="project-expand-list">
                               <li>
                                 Excel 보고서 생성 시 각 Cell 마다 Style을 적용하는 부분으로 인해 생성 지연
-                                <br />→ Singleton Pattern을 적용해, 동일한 Style이 반복 생성되지 않도록 구조를 개선
+                                <br />→ Singleton Pattern을 적용해, 동일한 Style이 반복 생성되지 않도록 구조를 개선해서 10분 이상 소요되는 작업을 최대 2분 미만으로 개선
                               </li>
                               <li>
                                 API 요청이나 보고서 생성 중 오류가 발생했을 때, 즉각적인 대응 불가능
-                                <br />→ 실패 시 관리자 메일로 오류 내용을 발송하고, 재시도가 가능하도록 구현
+                                <br />→ 실패 시 관리자 메일로 오류 내용을 발송하고, 재시도가 가능하도록 구현하여 운영시 장애 대응 및 불편함 최소화
                               </li>
                               <li>
                                 대용량 데이터 조회 및 비교 시 지연
@@ -536,11 +534,11 @@
                             <p>
                               점검 요청 누락과 조회 오류 가능성을 줄였고,
                               실패하더라도 재시도할 수 있는 구조를 마련했습니다.
-                              <br />기존에 엔진별로 각기 달랐던 결과 전달
+                              <br />기존 엔진별로 각기 달랐던 결과 전달
                               흐름도 더 일관되고 단순하게 정리되면서 장애 대응
-                              난이도와 메모리 이슈가 완화됐고,<br />유지보수성도
+                              난이도와 메모리 이슈가 완화되며 유지보수성도
                               높아졌습니다.
-                               또한 예약 점검 실행과 단계 생성 방식이
+                              <br />또한 예약 점검 실행과 단계 생성 방식이
                               정리되면서 점검 진행 시간도 단축됐습니다.<br />그 결과
                               더 정밀한 점검 단계를 설계하고 운영할 수 있게
                               됐습니다.
@@ -552,9 +550,7 @@
                               <li>
                                 Outbox Pattern을 적용하면서 분리되어 있던 DB
                                 저장과 이벤트 발행의 일관성을 유지하는 방식을
-                                실무에 적용해볼 수 있었고,<br />이런 구조가 요청
-                                안정성과 장애 대응에 직접적인 도움이 된다는 점을
-                                느꼈습니다.
+                                실무에 적용해볼 수 있었던 경험이 되었습니다.
                               </li>
                               <li>
                                 Kafka 메모리 이슈를 해결하는 과정에서
@@ -570,7 +566,7 @@
                               </li>
                               <li>
                                 기존 레거시 코드 리팩터링뿐 아니라 DB 스키마를
-                                PostgreSQL에서 MySQL로 마이그레이션하면서,
+                                PostgreSQL에서 MySQL로 마이그레이션하는 과정에서 ERD도 다시 그려보며,
                                 코드와 스키마를 함께 다듬는 구조 개선 작업에 좋은 경험이였습니다.
                               </li>
                             </ul>
@@ -801,8 +797,8 @@
                     <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
-                        iOS와 Android 앱을 실제 배포했고, 약 60명의 사용자와
-                        312개의 술 데이터를 확보했습니다.
+                        2025년 10월에 iOS와 Android 앱을 정식 출시하였고,<br />
+                        약 60명의 사용자와 312개의 술 데이터를 확보했습니다.
                       </p>
                     </section>
                     <section class="project-overview-item">
@@ -814,9 +810,9 @@
                     <section class="project-overview-item is-wide">
                       <h4>핵심 기능</h4>
                       <ul class="project-overview-list">
-                        <li>술 추천과 모임 생성·참여 API</li>
-                        <li>OAuth 2.0 로그인과 푸시 알림</li>
-                        <li>Redis 기반 조회 성능 개선</li>
+                        <li>사용자 취향 기반 술 추천 기능</li>
+                        <li>모임 생성·참여를 통한 주류 커뮤니티 기능</li>
+                        <li>술과 이야기를 중심으로 한 사용자 소통 기능</li>
                       </ul>
                     </section>
                   </div>
@@ -857,73 +853,63 @@
                           <section class="project-expand-section">
                             <h4>팀 정보</h4>
                             <ul class="project-expand-list">
-                              <li>총 11명 규모의 사이드 프로젝트입니다.</li>
                               <li>
-                                Backend Developer로 참여해 서버 기능 설계와
-                                구현을 주도했습니다.
+                                총 11명 규모로 진행한 사이드 프로젝트입니다.
+                                <br />BE 1 · FE 3 · App 2 · Infra 1 · PM 1 ·
+                                Marketing 1 · UI/UX 1 · BI/BX 1
+                              </li>
+                              <li>
+                                Backend Developer로 참여해 주요 서버 기능 설계와
+                                구현을 담당했습니다.
                               </li>
                               <li>
                                 앱 개발자, 디자이너, PM과 협업하며 기능
                                 우선순위와 서버 구조를 함께 조율했습니다.
-                              </li>
-                              <li>
-                                세부 인원 구성은 추후 보강 예정입니다. 필요하면
-                                역할별 인원 수를 여기에 적으면 됩니다.
                               </li>
                             </ul>
                           </section>
 
                           <section class="project-expand-section">
                             <h4>서비스 사진</h4>
-                            <p class="project-expand-note">
-                              실제 서비스 화면 이미지는 아래 경로에 넣고,
-                              파일명만 맞추면 바로 교체하기 쉽습니다.
-                            </p>
                             <div class="project-shot-grid">
                               <!-- 실제 이미지를 넣을 때는 아래 placeholder 박스를 img 태그로 교체하면 됩니다. -->
                               <figure class="project-shot-card">
                                 <div class="project-shot-frame">
-                                  <p class="project-shot-label">
-                                    Screen Placeholder
-                                  </p>
-                                  <p class="project-shot-path">
-                                    예시 파일:
-                                    <code
-                                      >assets/screenshots/suldak/suldak-home.png</code
-                                    >
-                                  </p>
+                                  <img
+                                    src="assets/screenshots/suldak/suldak-home.jpg"
+                                    alt="술닥술닥_메인페이지" />
+                                    <img
+                                    src="assets/screenshots/suldak/recommand_liquor.jpg"
+                                    alt="술닥술닥_술_추천" />
                                 </div>
                                 <figcaption class="project-shot-meta">
-                                  메인 화면 또는 홈 피드
+                                  메인 화면
                                 </figcaption>
                               </figure>
                               <figure class="project-shot-card">
                                 <div class="project-shot-frame">
-                                  <p class="project-shot-label">
-                                    Screen Placeholder
-                                  </p>
-                                  <p class="project-shot-path">
-                                    예시 파일:
-                                    <code
-                                      >assets/screenshots/suldak/suldak-recommend.png</code
-                                    >
-                                  </p>
+                                  <img
+                                    src="assets/screenshots/suldak/search_liquor_1.jpg"
+                                    alt="술닥술닥_술_검색_1" />
+                                    <img
+                                    src="assets/screenshots/suldak/search_liquor_2.jpg"
+                                    alt="술닥술닥_술_검색_2" />
+                                    <img
+                                    src="assets/screenshots/suldak/liquor_detail.jpg"
+                                    alt="술닥술닥_술_상세_조회" />
                                 </div>
                                 <figcaption class="project-shot-meta">
-                                  추천 기능 화면
+                                  술 조회 화면
                                 </figcaption>
                               </figure>
                               <figure class="project-shot-card">
                                 <div class="project-shot-frame">
-                                  <p class="project-shot-label">
-                                    Screen Placeholder
-                                  </p>
-                                  <p class="project-shot-path">
-                                    예시 파일:
-                                    <code
-                                      >assets/screenshots/suldak/suldak-meeting.png</code
-                                    >
-                                  </p>
+                                  <img
+                                    src="assets/screenshots/suldak/party_home.jpg"
+                                    alt="술닥술닥_모임_목록_조회" />
+                                    <img
+                                    src="assets/screenshots/suldak/party_detail.jpg"
+                                    alt="술닥술닥_모임_상세_조회" />
                                 </div>
                                 <figcaption class="project-shot-meta">
                                   모임 생성 또는 참여 화면
@@ -932,44 +918,14 @@
                             </div>
                           </section>
 
-                          <section class="project-expand-section">
-                            <h4>서비스 및 앱 링크</h4>
-                            <div class="project-link-list">
-                              <a
-                                class="project-link"
-                                href="https://www.suldak.me/"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                서비스 바로가기
-                              </a>
-                              <a
-                                class="project-link"
-                                href="https://apps.apple.com/kr/app/%EC%88%A0%EB%8B%A5%EC%88%A0%EB%8B%A5/id6581483622"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                App Store
-                              </a>
-                              <a
-                                class="project-link"
-                                href="https://play.google.com/store/apps/details?id=me.suldak.cheers"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                Google Play
-                              </a>
-                            </div>
-                          </section>
-
-                          <section class="project-expand-section">
+                          <!-- <section class="project-expand-section">
                             <h4>추가 메모</h4>
                             <p>
                               추후 보강 예정입니다. 추천 로직을 어떻게 풀었는지,
                               사용자가 자주 쓰는 흐름이 무엇이었는지, 출시 이후
                               어떤 반응이 있었는지 적기 좋습니다.
                             </p>
-                          </section>
+                          </section> -->
                         </div>
                       </div>
                     </div>
