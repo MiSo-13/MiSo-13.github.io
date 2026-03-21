@@ -51,7 +51,9 @@
             <a href="#projects">프로젝트</a>
             <a href="#skills">기술</a>
             <a href="#career">경력</a>
-            <a href="#contact">연락처</a>
+            <a href="#education">학력</a>
+            <a href="#certification">자격증</a>
+            <!-- <a href="#contact">연락처</a> -->
           </nav>
         </div>
       </header>
@@ -213,29 +215,35 @@
                   <section class="project-overview-item is-wide">
                     <h4>프로젝트 소개</h4>
                     <p>
-                      SooJi.Bee 결과 데이터를 수집하고 비교해, 정기 보고서
-                      생성과 요약 메일 발송까지 자동화한 서비스입니다.
+                      SooJi.Bee 결과 데이터를 동적 스케줄 기반으로 수집하고
+                      비교해, 정기 보고서 생성과 요약 메일 발송까지 자동화한
+                      서비스입니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      20개 고객사를 대상으로 주 1~2회 자동화 운영이 가능해졌고,
-                      보고서 생성 시간도 10분 이상에서 1분 미만으로 줄였습니다.
+                      기존 솔루션에서는 제한적이였던 데이터 비교 분석 및 보고서 생성, 메일 자동 발송까지 구현해서 전체적인 솔루션의 완성도를 높혔고, 운영팀의 업무 효율도 높일 수 있었습니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
                     <h4>인원</h4>
                     <p>
-                      1인 개발로 백엔드, 운영 화면, DB 스키마 설계를 맡았습니다.
+                      1인 개발로 백엔드, 운영 화면 구현, DB 스키마 설계를
+                      맡았습니다.
                     </p>
                   </section>
                   <section class="project-overview-item is-wide">
                     <h4>핵심 기능</h4>
                     <ul class="project-overview-list">
-                      <li>사용자 설정 기반 동적 스케줄링</li>
-                      <li>Snapshot 수집 및 데이터 비교</li>
-                      <li>주간 보고서 생성과 메일 발송 자동화</li>
+                      <li>사용자 설정 기반 동적 스케줄링 기능 지원</li>
+                      <li>SooJi.Bee 데이터의 Snapshot 수집 및 데이터 집계 및 비교 기능</li>
+                      <li>
+                        주간 비교 보고서 생성과 메일 발송 자동화 파이프 라인 구축
+                      </li>
+                      <li>
+                        PoC 고객사를 위한 전용 보고서 및 메일 템플릿 생성 · 발송 자동화 기능
+                      </li>
                     </ul>
                   </section>
                 </div>
@@ -249,8 +257,6 @@
                   <span>MySQL</span>
                 </div>
 
-                <!-- 추가 상세 영역: 접힌 상태에서는 보이지 않고, 버튼을 누르면 아래로 펼쳐집니다. -->
-                <!-- 추후 아키텍처, 트러블슈팅, 회고 등을 자유롭게 보강하면 됩니다. -->
                 <div class="project-expand" data-project-expand>
                   <button
                     class="project-expand-button"
@@ -281,86 +287,119 @@
                           <section>
                             <h4>문제</h4>
                             <p>
-                              고객사별 점검 결과를 주기적으로 수집하고 비교해서
-                              분석할 수 있는 보고서와 메일 발송 기능이
-                              필요했습니다. 기존 솔루션에는 데이터 비교와 보고서
-                              생성 기능이 없었고, 반복 작업도 많아 자동화가
-                              필요했습니다.
+                              고객사별 점검 이력과 결과 데이터를 비교해 변화
+                              내용을 파악하고, 이를 바탕으로 보고서 생성과 메일
+                              발송까지 처리할 수 있는 기능이 필요했습니다.<br />
+                              하지만 기존 솔루션에는 데이터 비교와 보고서 생성
+                              기능이 없어 운영팀이 반복적인 데이터 비교와 메일 발송
+                              업무를 수작업으로 처리해야 했고,<br />고객사
+                              요청에 대응하는 과정도 비효율적이었습니다.
                             </p>
                           </section>
                           <section>
                             <h4>해결</h4>
                             <p>
-                              별도 서비스로 분리하고 공통 모듈을 정리했으며, API
-                              Server와 Batch Server를 나눠 오래 걸리는 보고서
-                              생성 작업을 비동기로 처리했습니다. 동적
-                              스케줄링으로 수집, 비교, 보고서 생성, 메일
-                              발송까지 자동화했습니다.
+                              추가 개발이 필요한 기능을 별도의 서비스로
+                              분리하고, 공통 모듈을 정리해 중복 로직을
+                              최소화했습니다.<br />또한 API Server와 Batch
+                              Server를 분리해 오래 걸리는 보고서 생성 작업을
+                              비동기로 처리하고,<br />동적 스케줄링을 적용해
+                              데이터 수집, 비교, 보고서 생성, 메일 발송까지 한
+                              흐름으로 자동화했습니다.
                             </p>
                           </section>
                           <section>
                             <h4>결과</h4>
                             <p>
-                              기존 서비스에서 어려웠던 데이터 비교와 보고서
-                              생성이 가능해졌고, 운영팀이 직접 보고서를 만들고
-                              관리할 수 있어 고객사 대응 속도도 빨라졌습니다.
+                              기존 서비스에서 불가능했던 점검 이력 기반 데이터
+                              비교와 보고서 생성 기능을 제공할 수 있게 되었고,
+                              운영팀이 직접 보고서를 생성하고 관리할 수 있는
+                              구조를 마련했습니다. 그 결과 고객사 대응 속도가
+                              개선되었고, 약 20개 고객사를 대상으로 주 1회
+                              데이터 수집, 비교, 보고서 생성, 메일 발송
+                              일정을<br />
+                              자동화할 수 있었습니다. 또한 Excel 보고서 생성
+                              병목을 개선해 10분 이상 걸리던 작업을 1분 이하로
+                              단축했습니다.
                             </p>
                           </section>
                           <section>
-                            <h4>배운 점</h4>
-                            <p>
-                              오래 걸리는 작업은 사용자 요청 흐름에서 분리하고,
-                              익숙한 기능도 병목 지점을 정확히 보면 크게 개선할
-                              수 있다는 점을 다시 확인했습니다.
-                            </p>
+                            <h4>기술적 인사이트</h4>
+                            <ul class="project-expand-list">
+                              <li>
+                                사내 서비스와 연동되는 별도의 서비스를 구현하며,
+                                서비스 분리와 연동 구조를 직접 다뤄볼 수
+                                있었습니다.<br />이 과정에서 정확한 도메인
+                                분리가 확장성과 운영성 측면에서 훨씬
+                                효과적이었습니다.
+                              </li>
+                              <li>
+                                오래 걸리거나 비동기로 진행되는 작업은 사용자
+                                요청 흐름에서 분리하고,<br />Batch Server(별도
+                                서비스)에서 처리해야 응답성과 유지보수 효율을
+                                함께 챙길 수 있었습니다.
+                              </li>
+                              <li>
+                                대용량 데이터를 다루는 기능에서는 저장, 비교,
+                                보고서 생성 전 과정에서 병목 지점을 구체적으로
+                                확인해야 했고,<br />서비스 연동 구조를 검토하고
+                                적절한 디자인 패턴을 적용하는 과정이 성능 개선에
+                                직접적인 도움이 됐습니다.
+                              </li>
+                              <li>
+                                실제 운영에서 사용하는 보고서와 메일 발송 기능은
+                                기능 구현 자체도 중요하지만,<br />운영 중 장애
+                                대응(실패 알림 및 재시도 로직)과 같은 지속적인
+                                최적화가 안정성에 더 큰 영향을 줬습니다.
+                              </li>
+                            </ul>
                           </section>
                         </div>
 
-                        <!-- 다이어그램 자리: 추후 이미지로 교체할 때 아래 박스를 img 태그로 바꾸면 됩니다. -->
-                        <section
-                          class="project-expand-section project-expand-section-diagram"
-                        >
-                          <h4>아키텍처 다이어그램</h4>
-                          <div class="diagram-placeholder">
-                            <p class="diagram-placeholder-label">
-                              Diagram Placeholder
-                            </p>
-                            <p class="diagram-placeholder-path">
-                              예시 파일 경로:
-                              <code
-                                >assets/diagrams/beekeeper-architecture.png</code
-                              >
-                            </p>
-                            <p class="diagram-placeholder-copy">
-                              추후 API Server, Batch Server, Scheduler, Report
-                              Generator, 외부 연동 API 흐름 등을 한 눈에
-                              보이도록 정리하면 좋습니다.
-                            </p>
-                          </div>
-                        </section>
-
                         <section class="project-expand-section">
-                          <h4>추가 구현 상세</h4>
+                          <h4>자동화 파이프라인</h4>
                           <p>
-                            추후 보강 예정입니다. 스케줄러 구조, 보고서 생성
-                            흐름, API Server와 Batch Server를 어떻게 분리했는지
-                            더 자세히 적을 수 있습니다.
+                            <ul class="project-expand-list">
+                              <li>
+                                Quartz를 사용해 사용자가 원하는 주기 및 일시에 동작 예약
+                              </li>
+                              <li>
+                                Eureka / Gateway를 이용해 사내 다른 서비스와 연동하여 데이터 수집 및 저장
+                              </li>
+                              <li>
+                                이전 데이터와 비교하여 주간 보고서 생성
+                              </li>
+                              <li>
+                                비교한 데이터 기반으로 이메일 템플릿에 적용 및 각 고객사 별 정해진 일정에 메일 송부
+                              </li>
+                            </ul>
                           </p>
                         </section>
                         <section class="project-expand-section">
                           <h4>트러블슈팅</h4>
                           <p>
-                            추후 보강 예정입니다. 병목을 어떤 식으로 측정했는지,
-                            Excel 생성 시간을 줄이기 위해 어떤 선택을 했는지
-                            정리하기 좋습니다.
+                            <ul class="project-expand-list">
+                              <li>
+                                Excel 보고서 생성 시 각 Cell 마다 Style을 적용하는 부분으로 인해 생성 지연
+                                <br />→ Singleton Pattern을 적용해, 동일한 Style이 반복 생성되지 않도록 구조를 개선
+                              </li>
+                              <li>
+                                API 요청이나 보고서 생성 중 오류가 발생했을 때, 즉각적인 대응 불가능
+                                <br />→ 실패 시 관리자 메일로 오류 내용을 발송하고, 재시도가 가능하도록 구현
+                              </li>
+                              <li>
+                                대용량 데이터 조회 및 비교 시 지연
+                                <br />→ DB INDEX를 활용 및 데이터를 캐싱하여 조회 시간 단축 (30초 > 2초)
+                                <br />→ DB 조회보다, 코드로 집계가 더 빠르다고 판단되는 부분 리팩터링
+                              </li>
+                            </ul>
                           </p>
                         </section>
                         <section class="project-expand-section">
                           <h4>회고</h4>
                           <p>
-                            추후 보강 예정입니다. 1인 개발로 진행하면서 어떤
-                            판단을 했는지, 다음에 다시 만든다면 무엇을 더
-                            개선할지 적을 수 있습니다.
+                            설계 초기에 요구사항 규모와 복잡도를 고려했을 때, Spring Batch의 도입보다 Quartz에서 단순한 메서드 호출 방식이 적절하다고 판단했습니다.
+<br />실제로 오류 트래킹, 실패 알림, 재시도 로직 등을 직접 구성해 운영할 수 있었지만, 돌아보면 배치 실행 단위의 상태 관리와 재처리 흐름, 모니터링을<br />더 표준화된 방식으로 가져가기 위해 Spring Batch를 적용했다면 운영 안정성을 더 높일 수 있었겠다는 생각을 하게 되었습니다.
                           </p>
                         </section>
                       </div>
@@ -382,16 +421,19 @@
                   <section class="project-overview-item is-wide">
                     <h4>프로젝트 소개</h4>
                     <p>
-                      Python / Django 기반 ASM 솔루션을 Java / Spring 구조로
-                      다시 구성하며, 서비스 연동과 점검 실행 흐름을 고도화한
+                      Python / Django 기반 ASM 솔루션을 Java / Spring
+                      구조로 다시 구성하면서, 고객사 요청 사항을 반영한 UI/UX
+                      개선과 점검 실행 흐름, 조회 구조를 함께 고도화한
                       프로젝트입니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      Outbox와 CDC를 도입해 요청 유실 가능성을 줄였고, Redis
-                      전달 구조로 대용량 전송 시 메모리 부담도 완화했습니다.
+                      Outbox Pattern을 도입해 요청 유실 가능성을 줄였고,
+                      <br />점검 결과 전달 구조를 Kafka payload 중심에서
+                      Redis Key 기반으로 바꿔 대용량 전송 시 메모리 부담을
+                      완화했습니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
@@ -404,9 +446,19 @@
                   <section class="project-overview-item is-wide">
                     <h4>핵심 기능</h4>
                     <ul class="project-overview-list">
-                      <li>레거시 기능의 Java / Spring 마이그레이션</li>
-                      <li>Outbox Pattern과 CDC 기반 연동 구조 개선</li>
-                      <li>예약 점검 구조와 조회 API 개선</li>
+                      <li>
+                        기존 SooJi.Bee 기능을 유지하면서 UI/UX 개선
+                      </li>
+                      <li>
+                        특정 CVE를 대상으로 한 취약점 점검 기능
+                      </li>
+                      <li>
+                        점검 실행 시 이미 탐지된 결과를 활용하는 옵션을 추가해
+                        더 체계적인 운영 지원
+                      </li>
+                      <li>
+                        자산 - 포트별 상세 위협 생성 및 처리 기능
+                      </li>
                     </ul>
                   </section>
                 </div>
@@ -414,13 +466,16 @@
                 <div class="chip-row" aria-label="SooJi.Bee 2.0 기술 스택">
                   <span>Java</span>
                   <span>Spring Boot</span>
+                  <span>Spring Cloud Gateway</span>
+                  <span>Spring Quartz</span>
                   <span>Kafka</span>
                   <span>Redis</span>
+                  <span>Eureka</span>
                   <span>JPA</span>
+                  <span>MyBatis</span>
                   <span>MySQL</span>
                 </div>
 
-                <!-- 추가 상세 영역: 필요한 만큼 섹션을 늘리거나 문구를 교체해도 됩니다. -->
                 <div class="project-expand" data-project-expand>
                   <button
                     class="project-expand-button"
@@ -451,44 +506,79 @@
                           <section>
                             <h4>문제</h4>
                             <p>
-                              점검 요청 저장과 Kafka 발행 상태가 어긋날 수
-                              있었고, 서비스별 저장소가 나뉘어 있어 연계 조회가
-                              복잡했습니다. 대용량 점검 결과 전달 과정에서는
-                              메모리 이슈가 있었고, 페이지네이션이 없는 조회
-                              API도 사용성이 좋지 않았습니다.
+                              점검 요청 저장과 Kafka 이벤트 발행 상태가
+                              어긋나면서 조회 오류가 발생하거나 요청이 누락되는
+                              문제가 있었습니다.<br />점검 결과 처리도 대용량
+                              데이터를 Kafka body에 직접 담는 구조 때문에
+                              메모리 이슈가 반복됐고,<br />이를 해결하기 위해 메모리
+                              설정만 계속 늘리는 악순환이 있었습니다. 
+                              또한 예약 점검은 30초마다 DB를 조회하는
+                              polling 방식이라 비효율적이었습니다.
                             </p>
                           </section>
                           <section>
                             <h4>해결</h4>
                             <p>
-                              Outbox Pattern으로 저장과 발행의 경계를 분명히
-                              하고, CDC로 필요한 조회 모델을 따로 만들었습니다.
-                              대용량 결과는 Redis에 저장하고 Key만 전달하도록
-                              바꿨으며, polling 대신 스케줄 기반 예약 점검
-                              구조를 적용했습니다.
+                              Outbox Pattern을 도입해 점검 요청 저장과 이벤트
+                              발행을 하나의 트랜잭션으로 묶어 데이터 일관성과
+                              장애 대응 가능성을 높였습니다.<br />점검 결과의
+                              연동 방식도 Core 서비스가 고유한 Redis Key를
+                              기준으로 요청과 결과를 주고받도록 전달 구조를
+                              변경했습니다.<br />또한 Spring Quartz 기반으로
+                              예약 점검이 정확한 시점에 실행되도록 개선했고,
+                              사용자가 선택한 옵션에 맞게 자산과 포트별로 실제
+                              필요한 점검 단계만 실행되도록 Plan 저장 구조를
+                              조정했습니다.
                             </p>
                           </section>
                           <section>
                             <h4>결과</h4>
                             <p>
-                              요청 유실 가능성과 조회 오류를 줄였고, 연계 조회도
-                              더 단순하게 정리할 수 있었습니다. 중복 점검이
-                              실행되지 않도록 흐름을 바꾸면서 운영 구조도 더
-                              명확해졌습니다.
+                              점검 요청 누락과 조회 오류 가능성을 줄였고,
+                              실패하더라도 재시도할 수 있는 구조를 마련했습니다.
+                              <br />기존에 엔진별로 각기 달랐던 결과 전달
+                              흐름도 더 일관되고 단순하게 정리되면서 장애 대응
+                              난이도와 메모리 이슈가 완화됐고,<br />유지보수성도
+                              높아졌습니다.
+                               또한 예약 점검 실행과 단계 생성 방식이
+                              정리되면서 점검 진행 시간도 단축됐습니다.<br />그 결과
+                              더 정밀한 점검 단계를 설계하고 운영할 수 있게
+                              됐습니다.
                             </p>
                           </section>
                           <section>
-                            <h4>배운 점</h4>
-                            <p>
-                              서비스가 분리된 환경에서는 이벤트 발행 자체보다도,
-                              실패 복구 전략과 조회 모델 설계가 함께 중요하다는
-                              점을 많이 배웠습니다.
-                            </p>
+                            <h4>기술적 인사이트</h4>
+                            <ul class="project-expand-list">
+                              <li>
+                                Outbox Pattern을 적용하면서 분리되어 있던 DB
+                                저장과 이벤트 발행의 일관성을 유지하는 방식을
+                                실무에 적용해볼 수 있었고,<br />이런 구조가 요청
+                                안정성과 장애 대응에 직접적인 도움이 된다는 점을
+                                느꼈습니다.
+                              </li>
+                              <li>
+                                Kafka 메모리 이슈를 해결하는 과정에서
+                                Sequence Diagram으로 레거시 흐름을 다시
+                                정리해보며,<br />구조를 새로 그려보는 작업이 서비스
+                                이해도와 개선 방향을 정리해 볼 수 있는 경험이 되었습니다.
+                              </li>
+                              <li>
+                                Event 방식과 REST 방식이 함께 쓰이는 연동
+                                환경을 경험하면서, MSA 환경을 더 깊이
+                                이해하게 됐고, 헥사고날 방식에도 흥미가
+                                생겨서 개인 프로젝트에 적용해볼 수 있었습니다.
+                              </li>
+                              <li>
+                                기존 레거시 코드 리팩터링뿐 아니라 DB 스키마를
+                                PostgreSQL에서 MySQL로 마이그레이션하면서,
+                                코드와 스키마를 함께 다듬는 구조 개선 작업에 좋은 경험이였습니다.
+                              </li>
+                            </ul>
                           </section>
                         </div>
 
                         <!-- 다이어그램 자리: 실제 다이어그램 이미지가 생기면 같은 위치에 넣으면 됩니다. -->
-                        <section
+                        <!-- <section
                           class="project-expand-section project-expand-section-diagram"
                         >
                           <h4>아키텍처 다이어그램</h4>
@@ -508,32 +598,48 @@
                               좋아집니다.
                             </p>
                           </div>
-                        </section>
+                        </section> -->
 
                         <section class="project-expand-section">
-                          <h4>추가 구현 상세</h4>
+                          <h4>Outbox Pattern 적용</h4>
                           <p>
-                            추후 보강 예정입니다. Outbox Pattern 적용 흐름, CDC
-                            조회 모델 구성, Redis 전달 구조를 상세하게 풀어낼 수
-                            있습니다.
+                            <ul class="project-expand-list">
+                              <li>
+                                @Transaction 블록에서 OutboxEntity 저장 및 OutboxEvent 생성
+                              </li>
+                              <li>
+                                @TransactionalEventListener 을 이용해서, Transaction이 정상적으로 종료된 OutboxEvent를 받음
+                              </li>
+                              <li>
+                                OutboxEntity에서 미리 정의된 eventCode와 payload 등을 조회해서 정해진 동작 수행
+                              </li>
+                              <li>
+                                만약 @Transaction 블록에서 실패시 @TransactionalEventListener가 받을 Event가 발행되지 않기 때문에 동작하지 않음
+                              </li>
+                            </ul>
                           </p>
                         </section>
                         <section class="project-expand-section">
                           <h4>트러블슈팅</h4>
                           <p>
-                            추후 보강 예정입니다. 저장과 발행 불일치 문제를
-                            어떻게 확인했는지, 메모리 이슈를 어떤 기준으로
-                            줄였는지 적기 좋습니다.
+                            <ul class="project-expand-list">
+                              <li>
+                                점검을 수행하는 엔진마다 점검을 실행하는 이벤트 처리가 조금씩 다르고, Kafka에 지속적인 메모리 오류
+                                <br />→ 모든 엔진의 교환 방식을 Redis에 데이터를 저장하고 그 Key를 교환하는 방식으로 일관적으로 정리 및 적용
+                              </li>
+                              <li>
+                                서버의 장애 발생 등의 이유로 서버가 구동하고 있지 않을 때, 예약 점검이 실행되지 않는 문제
+                                <br />→ ApplicationRunner를 상속받는 Component를 이용해서 다시 scheduler를 활성화하고,<br />특정 기준을 통해서 예약 점검을 바로 실행하거나 다음 실행 주기로 미루는 코드 구현
+                              </li>
+                            </ul>
                           </p>
                         </section>
-                        <section class="project-expand-section">
+                        <!-- <section class="project-expand-section">
                           <h4>회고</h4>
                           <p>
-                            추후 보강 예정입니다. 연동이 많은 시스템을 설계하며
-                            어떤 점이 어려웠는지, 이후엔 어떻게 개선하고 싶은지
-                            정리할 수 있습니다.
+                            
                           </p>
-                        </section>
+                        </section> -->
                       </div>
                     </div>
                   </div>
@@ -541,72 +647,158 @@
               </article>
 
               <div class="project-grid">
-                <article class="project-card">
+                <article class="project-card project-card-featured">
                   <div class="project-header">
                     <div>
                       <p class="project-period">2023.05 - 현재</p>
                       <h3>SooJi.Bee</h3>
+                      <div class="project-link-list is-compact">
+                        <a
+                          class="project-link"
+                          href="https://soojibee.com/"
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="SooJi.Bee 서비스 링크"
+                          >Service Link</a
+                        >
+                      </div>
                     </div>
                     <p class="project-role">운영 서비스</p>
                   </div>
 
-                  <p class="project-summary">
-                    공격표면관리(ASM)와 취약점 진단 기능을 제공하는 기존 운영
-                    서비스입니다.
-                  </p>
-
                   <div class="project-overview-grid">
                     <section class="project-overview-item is-wide">
+                      <h4>프로젝트 소개</h4>
+                      <p>
+                        공격표면관리(ASM)와 취약점 진단 기능을 제공하는 기존
+                        운영 서비스입니다.
+                      </p>
+                    </section>
+                    <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
-                        DB 연결 검증 로직과 bulk 저장 방식을 적용해 점검 누락
-                        재발을 막고 운영 안정성을 높였습니다.
+                        polling 방식의 예약 점검 실행 로직에 DB 연결 검증 로직을 추가하여 네트워크 장애 시 대응할 수 있도록 개선했고,
+                        <br />bulk 저장 방식을 적용해 대용량 점검 결과에 대해서 장애를 막고 운영 안정성을 높였습니다.
                       </p>
                     </section>
                     <section class="project-overview-item">
                       <h4>인원</h4>
                       <p>
-                        Backend Developer로 유지보수와 신규 기능 개발을
-                        맡았습니다.
+                        BE 3명, FE 2명으로 진행한 프로젝트에서 백엔드를 담당했습니다.
                       </p>
                     </section>
-                    <section class="project-overview-item">
+                    <section class="project-overview-item is-wide">
                       <h4>핵심 기능</h4>
                       <ul class="project-overview-list">
-                        <li>Django 기반 운영 서비스 유지보수</li>
-                        <li>예약 점검 안정성 개선</li>
-                        <li>대용량 결과 bulk 저장</li>
+                        <li>Django 기반 ASM 운영 서비스 유지보수 및 신규 기능 개발</li>
+                        <li>노출 자산과 위협 정보 모니터링, 취약점 진단 기능 운영</li>
+                        <li>자산의 서브도메인 수집 및 등록하여 점검 수행 기능</li>
+                        <li>자산에 대한 위협 자동 생성 및 상태 변경을 통한 효율적인 운영</li>
                       </ul>
                     </section>
                   </div>
 
-                  <div class="chip-row">
+                  <div class="chip-row" aria-label="SooJi.Bee 기술 스택">
                     <span>Python</span>
                     <span>Django</span>
-                    <span>PostgreSQL</span>
+                    <span>Spring Cloud Gateway</span>
                     <span>Kafka</span>
                     <span>Redis</span>
+                    <span>Eureka</span>
+                    <span>PostgreSQL</span>
+                  </div>
+
+                  <div class="project-expand" data-project-expand>
+                    <button
+                      class="project-expand-button"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="soojibee-extra"
+                    >
+                      <span
+                        class="project-expand-label project-expand-label-collapsed"
+                        >상세 펼치기</span
+                      >
+                      <span
+                        class="project-expand-label project-expand-label-expanded"
+                        >상세 접기</span
+                      >
+                    </button>
+
+                    <div
+                      class="project-expand-panel"
+                      id="soojibee-extra"
+                      aria-hidden="true"
+                    >
+                      <div class="project-expand-inner">
+                        <div class="project-expand-grid">
+                          <section class="project-expand-section">
+                            <h4>문제 해결</h4>
+                            <ul class="project-expand-list">
+                              <li>
+                                예약 점검 실행 시 일시적인 DB 연결 오류로 점검이
+                                누락될 수 있어, DB 연결 검증 로직을 추가해 운영
+                                중 장애에 대응할 수 있도록 개선했습니다.
+                              </li>
+                              <li>
+                                대용량 점검 결과 저장 시 개별 저장 방식으로 인한
+                                지연과 장애 위험이 있어, bulk 저장 방식으로
+                                변경해 처리 안정성과 운영 효율을 높였습니다.
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card project-card-featured">
                   <div class="project-header">
                     <div>
                       <p class="project-period">
                         2023.06 - 현재 · Side Project
                       </p>
                       <h3>술닥술닥</h3>
+                      <div class="project-link-list is-compact">
+                        <a
+                          class="project-link"
+                          href="https://www.suldak.me/"
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="술닥술닥 서비스 링크"
+                          >Service Link</a
+                        >
+                        <a
+                          class="project-link"
+                          href="https://apps.apple.com/kr/app/%EC%88%A0%EB%8B%A5%EC%88%A0%EB%8B%A5/id6581483622"
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="술닥술닥 App Store 링크"
+                          >App Store</a
+                        >
+                        <a
+                          class="project-link"
+                          href="https://play.google.com/store/apps/details?id=me.suldak.cheers"
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="술닥술닥 Google Play 링크"
+                          >Google Play</a
+                        >
+                      </div>
                     </div>
                     <p class="project-role">Side Project</p>
                   </div>
 
-                  <p class="project-summary">
-                    사용자 취향에 맞는 술 추천과 모임 생성·참여 기능을 제공하는
-                    주류 커뮤니티 서비스입니다.
-                  </p>
-
                   <div class="project-overview-grid">
                     <section class="project-overview-item is-wide">
+                      <h4>프로젝트 소개</h4>
+                      <p>
+                        사용자 취향에 맞는 술 추천과 모임 생성·참여 기능을
+                        제공하는 주류 커뮤니티 서비스입니다.
+                      </p>
+                    </section>
+                    <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
                         iOS와 Android 앱을 실제 배포했고, 약 60명의 사용자와
@@ -619,7 +811,7 @@
                         총 11명 규모 프로젝트에서 백엔드 개발을 담당했습니다.
                       </p>
                     </section>
-                    <section class="project-overview-item">
+                    <section class="project-overview-item is-wide">
                       <h4>핵심 기능</h4>
                       <ul class="project-overview-list">
                         <li>술 추천과 모임 생성·참여 API</li>
@@ -629,7 +821,7 @@
                     </section>
                   </div>
 
-                  <div class="chip-row">
+                  <div class="chip-row" aria-label="술닥술닥 기술 스택">
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>RabbitMQ</span>
@@ -784,7 +976,7 @@
                   </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card project-card-featured">
                   <div class="project-header">
                     <div>
                       <p class="project-period">2024.02 - 2025.12</p>
@@ -793,13 +985,15 @@
                     <p class="project-role">회사 업무 · 1인 개발</p>
                   </div>
 
-                  <p class="project-summary">
-                    점검 요청, 담당자 배정, 보고서 등록, 이행 이력 관리를
-                    지원하는 서비스입니다.
-                  </p>
-
                   <div class="project-overview-grid">
                     <section class="project-overview-item is-wide">
+                      <h4>프로젝트 소개</h4>
+                      <p>
+                        점검 요청, 담당자 배정, 보고서 등록, 이행 이력 관리를
+                        지원하는 서비스입니다.
+                      </p>
+                    </section>
+                    <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
                         외부 SI 업체에서 인수받은 프로젝트를 운영 가능한
@@ -812,7 +1006,7 @@
                         1인 개발로 백엔드 중심 개발과 운영 화면까지 맡았습니다.
                       </p>
                     </section>
-                    <section class="project-overview-item">
+                    <section class="project-overview-item is-wide">
                       <h4>핵심 기능</h4>
                       <ul class="project-overview-list">
                         <li>SSO 연동</li>
@@ -822,7 +1016,7 @@
                     </section>
                   </div>
 
-                  <div class="chip-row">
+                  <div class="chip-row" aria-label="V-Portal 기술 스택">
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>Oracle</span>
@@ -910,7 +1104,7 @@
           <div class="container">
             <div class="section-heading">
               <p class="eyebrow">Career</p>
-              <h2>경력과 배경</h2>
+              <h2>경력</h2>
             </div>
 
             <div class="timeline">
@@ -926,21 +1120,47 @@
                   </p>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="education">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Education</p>
+              <h2>학력</h2>
+            </div>
+
+            <div class="timeline">
               <article class="timeline-item">
-                <p class="timeline-period">Education</p>
+                <p class="timeline-period">2024.02</p>
                 <div class="timeline-content">
                   <h3>학점은행제 컴퓨터공학과 졸업</h3>
-                  <p>
-                    실무 중심의 개발 경험과 함께 컴퓨터공학 전공 과정을
-                    이수했습니다.
-                  </p>
+                  <p>컴퓨터공학 전공 과정을 이수했습니다.</p>
                 </div>
               </article>
               <article class="timeline-item">
-                <p class="timeline-period">Certification</p>
+                <p class="timeline-period">2019.02</p>
+                <div class="timeline-content">
+                  <h3>서울로봇고등학교 제어과 졸업</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="certification">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Certification</p>
+              <h2>자격증</h2>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item">
+                <p class="timeline-period">2023.06</p>
                 <div class="timeline-content">
                   <h3>정보처리기사</h3>
-                  <p>취득일: 2023.06</p>
                 </div>
               </article>
             </div>
