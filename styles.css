@@ -220,6 +220,11 @@ button {
   margin: 18px 0 0;
 }
 
+.intro-description strong {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
 .action-row,
 .contact-actions {
   margin-top: 22px;
@@ -527,15 +532,22 @@ button {
   line-height: 1.75;
 }
 
+.project-overview-item strong,
+.project-detail-grid strong,
+.project-expand-section strong {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
 .project-overview-list {
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .project-overview-list li + li {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .chip-row {
@@ -670,13 +682,6 @@ button {
   margin: 0;
   color: var(--muted);
   line-height: 1.8;
-}
-
-.project-expand-list {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-  line-height: 1.9;
 }
 
 .project-expand-note {
