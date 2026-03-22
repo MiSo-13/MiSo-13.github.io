@@ -1004,6 +1004,58 @@
                           </section>
 
                           <section class="project-expand-section">
+                            <h4>인프라 · 배포</h4>
+                            <ul class="project-overview-list">
+                              <li>
+                                현재 인프라는 <strong>AWS EC2</strong> 환경에서
+                                <strong>API</strong>, <strong>Batch</strong>,
+                                <strong>Admin(Back Office)</strong>,
+                                <strong>Alarm 서버</strong>를
+                                <strong>docker compose</strong>로 운영하고
+                                있습니다.
+                              </li>
+                              <li>
+                                배포는 현재 <strong>Jenkins</strong> 기반으로
+                                진행하고 있습니다.
+                              </li>
+                            </ul>
+                          </section>
+
+                          <section class="project-expand-section">
+                            <h4>신규 리뉴얼 진행</h4>
+                            <ul class="project-overview-list">
+                              <li>
+                                기존 술닥술닥과 별도로
+                                <strong>헥사고날 아키텍처</strong>를 적용한 신규
+                                프로젝트를 <strong>진행 중</strong>입니다.
+                              </li>
+                              <li>
+                                <strong>ArchUnit</strong>를 도입해 아키텍처
+                                규칙과 의존성 방향을
+                                <strong>코드로 검증</strong>하고 있습니다.
+                              </li>
+                              <li>
+                                서비스 간 비동기 통신은
+                                <strong>RabbitMQ</strong>를 기준으로 가져가고,
+                                변경 데이터 전파는 <strong>CDC 방식</strong>으로
+                                구조를 구체화하고 있습니다.
+                              </li>
+                              <li>
+                                도메인 경계도 더 세밀하게 나눠
+                                <strong>DDD</strong> 기준으로
+                                <strong>backoffice</strong>,
+                                <strong>adminAuth</strong>,
+                                <strong>auth</strong>, <strong>batch</strong>,
+                                <strong>gateway</strong>,
+                                <strong>liquor</strong>,
+                                <strong>notification</strong>,
+                                <strong>party</strong>로 분리해 개발하고
+                                있습니다.
+                              </li>
+                            </ul>
+                          </section>
+
+                          <section class="project-expand-section">
                             <h4>서비스 사진</h4>
                             <div class="project-shot-grid">
                               <!-- 실제 이미지를 넣을 때는 아래 placeholder 박스를 img 태그로 교체하면 됩니다. -->
@@ -1124,8 +1176,6 @@
                           <strong>완료 처리</strong> ·
                           <strong>이행 점검</strong> 단계에서의 자동 메일 발신
                         </li>
-                        <!-- <li>Oracle 기반 DB 스키마 설계</li>
-                        <li>점검 요청 플로우 구현</li> -->
                       </ul>
                     </section>
                   </div>
@@ -1160,18 +1210,17 @@
                 <div class="chip-row">
                   <span>Java</span>
                   <span>Python</span>
-                  <span>JavaScript</span>
                 </div>
               </article>
               <article class="info-card">
-                <h3>Frameworks & Libraries</h3>
+                <h3>Backend</h3>
                 <div class="chip-row">
                   <span>Spring Boot</span>
-                  <span>MyBatis</span>
+                  <span>Spring Quartz</span>
                   <span>Spring Cloud Gateway</span>
                   <span>JPA</span>
-                  <span>Spring Quartz</span>
-                  <span>Django</span>
+                  <span>MyBatis</span>
+                  <span>Eureka</span>
                 </div>
               </article>
               <article class="info-card">
@@ -1188,24 +1237,29 @@
                   <span>MySQL</span>
                   <span>PostgreSQL</span>
                   <span>Oracle</span>
-                  <span>MongoDB</span>
                 </div>
               </article>
               <article class="info-card">
-                <h3>DevOps / Tools</h3>
+                <h3>Infra / DevOps</h3>
                 <div class="chip-row">
                   <span>Docker</span>
                   <span>Jenkins</span>
-                  <span>Git</span>
-                  <span>Swagger / OpenAPI</span>
+                  <span>AWS EC2</span>
                 </div>
               </article>
               <article class="info-card">
-                <h3>Collaboration / Testing</h3>
+                <h3>Tools / Documentation</h3>
                 <div class="chip-row">
+                  <span>Git</span>
+                  <span>Swagger / OpenAPI</span>
                   <span>Jira</span>
                   <span>Notion</span>
                   <span>Confluence</span>
+                </div>
+              </article>
+              <article class="info-card">
+                <h3>Testing</h3>
+                <div class="chip-row">
                   <span>JUnit</span>
                   <span>ArchUnit</span>
                 </div>
@@ -1249,8 +1303,8 @@
               <article class="timeline-item">
                 <p class="timeline-period">2024.02</p>
                 <div class="timeline-content">
-                  <h3>4년제 학점은행제 졸업</h3>
-                  <p>컴퓨터공학 전공 과정 이수</p>
+                  <h3>컴퓨터공학 학사</h3>
+                  <p>학점은행제</p>
                 </div>
               </article>
               <article class="timeline-item">
@@ -1280,39 +1334,6 @@
             </div>
           </div>
         </section>
-
-        <!-- <section class="section contact-section" id="contact">
-          <div class="container">
-            <div class="contact-card">
-              <div>
-                <p class="eyebrow">Contact</p>
-                <h2>복잡한 흐름을 안정적으로 정리하는 일을 좋아합니다.</h2>
-                <p class="section-description">
-                  배치 자동화, 서비스 연동, 이벤트 처리 안정화, 레거시
-                  마이그레이션처럼 구조를 잘 다듬어야 하는 환경에서 강점을
-                  발휘할 수 있습니다.
-                </p>
-              </div>
-
-              <div class="contact-actions">
-                <a
-                  class="button button-primary"
-                  href="mailto:swdfrgt3701@naver.com"
-                  >swdfrgt3701@naver.com</a
-                >
-                <a class="button button-secondary" href="tel:+821049183701"
-                  >010-4918-3701</a
-                >
-                <a
-                  class="button button-ghost is-disabled"
-                  href="#contact"
-                  data-github-link
-                  >GitHub 연결 예정</a
-                >
-              </div>
-            </div>
-          </div>
-        </section> -->
       </main>
 
       <footer class="site-footer">
