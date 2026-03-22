@@ -72,7 +72,7 @@
                 개발해 왔습니다.<br />배치 작업을
                 <strong>동적 스케줄링</strong>하고, 데이터를
                 <strong>수집·비교</strong>해 <strong>보고서 생성</strong>과
-                <strong>메일 발송</strong>까지 이어지는 흐름을
+                <strong>메일 발송</strong>까지 이어지는<br />
                 <strong>자동화</strong>하는 일을 주로 맡았습니다.
               </p>
               <p class="intro-description">
@@ -80,8 +80,8 @@
                 <strong>정합성</strong>과 <strong>운영 안정성</strong>을 함께
                 챙겨왔습니다. <strong>Outbox Pattern</strong>,
                 <strong>CDC</strong>, <strong>Redis</strong>를 활용해 구조를
-                안전하고 체계적으로 구성하고<br /><strong>장애 가능성</strong>을
-                줄이는 업무를 경험했습니다.
+                안전하고 체계적으로 구성하고<br /><strong>장애를 개선</strong>
+                한 경험이 있습니다.
               </p>
 
               <div class="action-row">
@@ -203,14 +203,290 @@
             </div>
 
             <div class="project-stack">
-              <!-- 기본 노출은 소개 / 성과 / 인원 / 핵심 기능 위주로 두고, 자세한 내용은 상세 펼침 안에서 보강하면 관리하기 쉽습니다. -->
+              <article class="project-card project-card-featured">
+                <div class="project-header">
+                  <div>
+                    <p class="project-period">2024.02 - 현재</p>
+                    <h3>SooJi.Bee 2.0</h3>
+                  </div>
+                  <p class="project-role">회사 업무 · Backend Developer</p>
+                </div>
+
+                <div class="project-overview-grid">
+                  <section class="project-overview-item is-wide">
+                    <h4>프로젝트 소개</h4>
+                    <p>
+                      Python / Django 기반 ASM 솔루션을
+                      <strong>Java / Spring</strong> 구조로 다시 구성하면서,
+                      고객사 요청 사항을 반영한 <strong>UI/UX</strong> 개선과
+                      <strong>점검 실행 흐름</strong>,
+                      <strong>조회 구조</strong>를 함께 고도화한 프로젝트입니다.
+                    </p>
+                  </section>
+                  <section class="project-overview-item">
+                    <h4>성과</h4>
+                    <p>
+                      <strong>Outbox Pattern</strong>을 도입해
+                      <strong>요청 유실</strong> 가능성을 줄였고,<br />점검 결과
+                      전달 구조를 Kafka payload 중심에서
+                      <strong>Redis Key</strong> 기반으로 바꿔 대용량 전송 시
+                      <strong>메모리 부담</strong>을 완화했습니다.
+                    </p>
+                  </section>
+                  <section class="project-overview-item">
+                    <h4>인원</h4>
+                    <p>
+                      BE 3명, FE 2명으로 진행한 프로젝트에서
+                      <strong>백엔드</strong>를 담당했습니다.
+                    </p>
+                  </section>
+                  <section class="project-overview-item is-wide">
+                    <h4>핵심 기능</h4>
+                    <ul class="project-overview-list">
+                      <li>
+                        기존 SooJi.Bee 기능을 유지하면서
+                        <strong>UI/UX 개선</strong>
+                      </li>
+                      <li>
+                        특정 <strong>CVE</strong>를 대상으로 한
+                        <strong>취약점 점검</strong> 기능
+                      </li>
+                      <li>
+                        점검 실행 시 이미 탐지된 결과를 활용하는 옵션을 추가해
+                        <strong>체계적인 운영</strong> 지원
+                      </li>
+                      <li>
+                        자산 - 포트별 <strong>상세 위협 생성</strong> 및 처리
+                        기능
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+
+                <div class="chip-row" aria-label="SooJi.Bee 2.0 기술 스택">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>Spring Cloud Gateway</span>
+                  <span>Spring Quartz</span>
+                  <span>Kafka</span>
+                  <span>Redis</span>
+                  <span>Eureka</span>
+                  <span>JPA</span>
+                  <span>MyBatis</span>
+                  <span>MySQL</span>
+                </div>
+
+                <div class="project-expand" data-project-expand>
+                  <button
+                    class="project-expand-button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="soojibee2-extra"
+                  >
+                    <span
+                      class="project-expand-label project-expand-label-collapsed"
+                      >상세 펼치기</span
+                    >
+                    <span
+                      class="project-expand-label project-expand-label-expanded"
+                      >상세 접기</span
+                    >
+                  </button>
+
+                  <div
+                    class="project-expand-panel"
+                    id="soojibee2-extra"
+                    aria-hidden="true"
+                  >
+                    <div class="project-expand-inner">
+                      <div class="project-expand-grid">
+                        <div
+                          class="project-detail-grid project-story-grid project-story-grid-expanded"
+                        >
+                          <section>
+                            <h4>문제</h4>
+                            <p>
+                              <strong>점검 요청 저장</strong>과
+                              <strong>Kafka 이벤트 발행</strong> 상태가
+                              어긋나면서 <strong>조회 오류</strong>가 발생하거나
+                              <strong>요청 누락</strong> 문제가 있었습니다.<br />
+                              점검 결과 처리도 <strong>대용량 데이터</strong>를
+                              Kafka body에 직접 담는 구조 때문에 메모리 이슈가
+                              반복됐고, <br />이를 해결하기 위해
+                              <strong>메모리 설정</strong>만 계속 늘리는
+                              악순환이 있었습니다. 또한 예약 점검은
+                              <strong>30초 polling</strong> 방식이라
+                              비효율적이었습니다.
+                            </p>
+                          </section>
+                          <section>
+                            <h4>해결</h4>
+                            <p>
+                              <strong>Outbox Pattern</strong>을 도입해 점검 요청
+                              저장과 이벤트 발행을
+                              <strong>하나의 트랜잭션</strong>으로 묶어
+                              <strong>데이터 일관성</strong>과 장애 대응
+                              가능성을 높였습니다.<br />점검 결과의 연동 방식도
+                              Core 서비스가 <strong>Redis Key</strong>를
+                              기준으로 요청과 결과를 주고받도록 전달 구조를
+                              변경했습니다.<br />또한
+                              <strong>Spring Quartz</strong> 기반으로 예약
+                              점검이 정확한 시점에 실행되도록 개선했고, 사용자가
+                              선택한 옵션에 맞게 자산과 포트별로
+                              <strong>필요한 점검 단계</strong>만 실행되도록
+                              Plan 저장 구조를 조정했습니다.
+                            </p>
+                          </section>
+                          <section>
+                            <h4>결과</h4>
+                            <p>
+                              <strong>요청 누락</strong>과
+                              <strong>조회 오류</strong> 가능성을 줄였고,
+                              실패하더라도 <strong>재시도</strong>할 수 있는
+                              구조를 마련했습니다.<br />기존 엔진별로 각기
+                              달랐던 결과 전달 흐름도
+                              <strong>일관되고 단순하게</strong> 정리되면서 장애
+                              대응 난이도와 메모리 이슈가 완화되며
+                              <strong>유지보수성</strong>도 높아졌습니다.
+                              <br />또한 예약 점검 실행과 단계 생성 방식이
+                              정리되면서 <strong>점검 진행 시간</strong>도
+                              단축됐고, 그 결과 더 정밀한 점검 단계를 설계하고
+                              운영할 수 있게 됐습니다.
+                            </p>
+                          </section>
+                          <section>
+                            <h4>기술적 인사이트</h4>
+                            <ul class="project-overview-list">
+                              <li>
+                                Outbox Pattern을 적용하면서
+                                <strong>DB 저장</strong>과
+                                <strong>이벤트 발행</strong>의 일관성을 유지하는
+                                방식을 실무에 적용해볼 수 있었습니다.
+                              </li>
+                              <li>
+                                Kafka 메모리 이슈를 해결하는 과정에서
+                                <strong>Sequence Diagram</strong>으로 레거시
+                                흐름을 다시 정리해보며,<br />구조를 새로
+                                그려보는 작업이 서비스 이해도와 개선 방향을
+                                정리하는 데 도움이 됐습니다.
+                              </li>
+                              <li>
+                                <strong>Event 방식</strong>과
+                                <strong>REST 방식</strong>이 함께 쓰이는 연동
+                                환경을 경험하면서, <strong>MSA 환경</strong>을
+                                더 깊이 이해하게 됐고,
+                                <strong>헥사고날 방식</strong>에도 흥미가 생겨
+                                <br />개인 프로젝트에 적용해볼 수 있었습니다.
+                              </li>
+                              <li>
+                                기존 레거시 코드 리팩터링뿐 아니라 DB 스키마를
+                                <strong>PostgreSQL</strong>에서
+                                <strong>MySQL</strong>로 마이그레이션하는
+                                과정에서 ERD도 다시 그려보며, <br /><strong
+                                  >코드</strong
+                                >와 <strong>스키마</strong>를 함께 다듬는 구조
+                                개선 작업을 경험했습니다.
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+
+                        <!-- 다이어그램 자리: 실제 다이어그램 이미지가 생기면 같은 위치에 넣으면 됩니다. -->
+                        <!-- <section
+                          class="project-expand-section project-expand-section-diagram"
+                        >
+                          <h4>아키텍처 다이어그램</h4>
+                          <div class="diagram-placeholder">
+                            <p class="diagram-placeholder-label">
+                              Diagram Placeholder
+                            </p>
+                            <p class="diagram-placeholder-path">
+                              예시 파일 경로:
+                              <code
+                                >assets/diagrams/soojibee2-architecture.png</code
+                              >
+                            </p>
+                            <p class="diagram-placeholder-copy">
+                              추후 Outbox, CDC, Redis, Kafka, 점검 예약 흐름과
+                              서비스 간 데이터 이동을 중심으로 정리하면 전달력이
+                              좋아집니다.
+                            </p>
+                          </div>
+                        </section> -->
+
+                        <section class="project-expand-section">
+                          <h4>Outbox Pattern 적용</h4>
+                          <ul class="project-overview-list">
+                            <li>
+                              <strong>@Transaction</strong> 블록에서
+                              <strong>OutboxEntity 저장</strong> 및
+                              <strong>OutboxEvent 생성</strong>
+                            </li>
+                            <li>
+                              <strong>@TransactionalEventListener</strong>를
+                              이용해서 Transaction이 정상적으로 종료된
+                              OutboxEvent를 수신
+                            </li>
+                            <li>
+                              OutboxEntity에서 미리 정의된
+                              <strong>eventCode</strong>와
+                              <strong>payload</strong> 등을 조회해서 정해진 동작
+                              수행
+                            </li>
+                            <li>
+                              만약 <strong>@Transaction</strong> 블록에서
+                              실패하면 <strong>Event</strong>가 발행되지 않기
+                              때문에 동작하지 않음
+                            </li>
+                            <li>
+                              <strong
+                                >1분 주기로 동작하는 프로세스를 구현</strong
+                              >하여, 발행에 실패한 이벤트를 조회하여
+                              <strong>재시도</strong> 실행
+                            </li>
+                          </ul>
+                        </section>
+                        <section class="project-expand-section">
+                          <h4>트러블슈팅</h4>
+                          <ul class="project-overview-list">
+                            <li>
+                              점검을 수행하는 엔진마다 이벤트 처리가 조금씩
+                              다르고,
+                              <strong>Kafka</strong>에 지속적인
+                              <strong>메모리 오류</strong> 발생 <br />→ 모든
+                              엔진의 교환 방식을 Redis에 데이터를 저장하고 그
+                              Key를 교환하는 방식으로 일관되게 정리 및 적용
+                            </li>
+                            <li>
+                              서버의 <strong>장애</strong> 등으로 서버가
+                              구동하고 있지 않을 때 <strong>예약 점검</strong>이
+                              실행되지 않는 문제 <br />→
+                              <strong>ApplicationRunner</strong>를 상속받는
+                              Component를 이용해서 다시 scheduler를 활성화하고,
+                              <br />특정 기준을 통해 예약 점검을 바로 실행하거나
+                              다음 실행 주기로 미루는 코드 구현
+                            </li>
+                          </ul>
+                        </section>
+                        <!-- <section class="project-expand-section">
+                          <h4>회고</h4>
+                          <p>
+                            
+                          </p>
+                        </section> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
               <article class="project-card project-card-featured">
                 <div class="project-header">
                   <div>
                     <p class="project-period">2023.08 - 현재</p>
                     <h3>Beekeeper</h3>
                   </div>
-                  <p class="project-role">회사 업무 · Full Stack Developer</p>
+                  <p class="project-role">회사 업무 · Backend Developer</p>
                 </div>
 
                 <div class="project-overview-grid">
@@ -471,277 +747,6 @@
                 </div>
               </article>
 
-              <article class="project-card project-card-featured">
-                <div class="project-header">
-                  <div>
-                    <p class="project-period">2024.02 - 현재</p>
-                    <h3>SooJi.Bee 2.0</h3>
-                  </div>
-                  <p class="project-role">회사 업무 · Backend Developer</p>
-                </div>
-
-                <div class="project-overview-grid">
-                  <section class="project-overview-item is-wide">
-                    <h4>프로젝트 소개</h4>
-                    <p>
-                      Python / Django 기반 ASM 솔루션을
-                      <strong>Java / Spring</strong> 구조로 다시 구성하면서,
-                      고객사 요청 사항을 반영한 <strong>UI/UX</strong> 개선과
-                      <strong>점검 실행 흐름</strong>,
-                      <strong>조회 구조</strong>를 함께 고도화한 프로젝트입니다.
-                    </p>
-                  </section>
-                  <section class="project-overview-item">
-                    <h4>성과</h4>
-                    <p>
-                      <strong>Outbox Pattern</strong>을 도입해
-                      <strong>요청 유실</strong> 가능성을 줄였고,<br />점검 결과
-                      전달 구조를 Kafka payload 중심에서
-                      <strong>Redis Key</strong> 기반으로 바꿔 대용량 전송 시
-                      <strong>메모리 부담</strong>을 완화했습니다.
-                    </p>
-                  </section>
-                  <section class="project-overview-item">
-                    <h4>인원</h4>
-                    <p>
-                      BE 3명, FE 2명으로 진행한 프로젝트에서
-                      <strong>백엔드</strong>를 담당했습니다.
-                    </p>
-                  </section>
-                  <section class="project-overview-item is-wide">
-                    <h4>핵심 기능</h4>
-                    <ul class="project-overview-list">
-                      <li>
-                        기존 SooJi.Bee 기능을 유지하면서
-                        <strong>UI/UX 개선</strong>
-                      </li>
-                      <li>
-                        특정 <strong>CVE</strong>를 대상으로 한
-                        <strong>취약점 점검</strong> 기능
-                      </li>
-                      <li>
-                        점검 실행 시 이미 탐지된 결과를 활용하는 옵션을 추가해
-                        <strong>체계적인 운영</strong> 지원
-                      </li>
-                      <li>
-                        자산 - 포트별 <strong>상세 위협 생성</strong> 및 처리
-                        기능
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-
-                <div class="chip-row" aria-label="SooJi.Bee 2.0 기술 스택">
-                  <span>Java</span>
-                  <span>Spring Boot</span>
-                  <span>Spring Cloud Gateway</span>
-                  <span>Spring Quartz</span>
-                  <span>Kafka</span>
-                  <span>Redis</span>
-                  <span>Eureka</span>
-                  <span>JPA</span>
-                  <span>MyBatis</span>
-                  <span>MySQL</span>
-                </div>
-
-                <div class="project-expand" data-project-expand>
-                  <button
-                    class="project-expand-button"
-                    type="button"
-                    aria-expanded="false"
-                    aria-controls="soojibee2-extra"
-                  >
-                    <span
-                      class="project-expand-label project-expand-label-collapsed"
-                      >상세 펼치기</span
-                    >
-                    <span
-                      class="project-expand-label project-expand-label-expanded"
-                      >상세 접기</span
-                    >
-                  </button>
-
-                  <div
-                    class="project-expand-panel"
-                    id="soojibee2-extra"
-                    aria-hidden="true"
-                  >
-                    <div class="project-expand-inner">
-                      <div class="project-expand-grid">
-                        <div
-                          class="project-detail-grid project-story-grid project-story-grid-expanded"
-                        >
-                          <section>
-                            <h4>문제</h4>
-                            <p>
-                              <strong>점검 요청 저장</strong>과
-                              <strong>Kafka 이벤트 발행</strong> 상태가
-                              어긋나면서 <strong>조회 오류</strong>가 발생하거나
-                              <strong>요청 누락</strong> 문제가 있었습니다.<br />
-                              점검 결과 처리도 <strong>대용량 데이터</strong>를
-                              Kafka body에 직접 담는 구조 때문에 메모리 이슈가
-                              반복됐고, <br />이를 해결하기 위해
-                              <strong>메모리 설정</strong>만 계속 늘리는
-                              악순환이 있었습니다. 또한 예약 점검은
-                              <strong>30초 polling</strong> 방식이라
-                              비효율적이었습니다.
-                            </p>
-                          </section>
-                          <section>
-                            <h4>해결</h4>
-                            <p>
-                              <strong>Outbox Pattern</strong>을 도입해 점검 요청
-                              저장과 이벤트 발행을
-                              <strong>하나의 트랜잭션</strong>으로 묶어
-                              <strong>데이터 일관성</strong>과 장애 대응
-                              가능성을 높였습니다.<br />점검 결과의 연동 방식도
-                              Core 서비스가 <strong>Redis Key</strong>를
-                              기준으로 요청과 결과를 주고받도록 전달 구조를
-                              변경했습니다.<br />또한
-                              <strong>Spring Quartz</strong> 기반으로 예약
-                              점검이 정확한 시점에 실행되도록 개선했고, 사용자가
-                              선택한 옵션에 맞게 자산과 포트별로
-                              <strong>필요한 점검 단계</strong>만 실행되도록
-                              Plan 저장 구조를 조정했습니다.
-                            </p>
-                          </section>
-                          <section>
-                            <h4>결과</h4>
-                            <p>
-                              <strong>요청 누락</strong>과
-                              <strong>조회 오류</strong> 가능성을 줄였고,
-                              실패하더라도 <strong>재시도</strong>할 수 있는
-                              구조를 마련했습니다.<br />기존 엔진별로 각기
-                              달랐던 결과 전달 흐름도
-                              <strong>일관되고 단순하게</strong> 정리되면서 장애
-                              대응 난이도와 메모리 이슈가 완화되며
-                              <strong>유지보수성</strong>도 높아졌습니다.
-                              <br />또한 예약 점검 실행과 단계 생성 방식이
-                              정리되면서 <strong>점검 진행 시간</strong>도
-                              단축됐고, 그 결과 더 정밀한 점검 단계를 설계하고
-                              운영할 수 있게 됐습니다.
-                            </p>
-                          </section>
-                          <section>
-                            <h4>기술적 인사이트</h4>
-                            <ul class="project-overview-list">
-                              <li>
-                                Outbox Pattern을 적용하면서
-                                <strong>DB 저장</strong>과
-                                <strong>이벤트 발행</strong>의 일관성을 유지하는
-                                방식을 실무에 적용해볼 수 있었습니다.
-                              </li>
-                              <li>
-                                Kafka 메모리 이슈를 해결하는 과정에서
-                                <strong>Sequence Diagram</strong>으로 레거시
-                                흐름을 다시 정리해보며,<br />구조를 새로
-                                그려보는 작업이 서비스 이해도와 개선 방향을
-                                정리하는 데 도움이 됐습니다.
-                              </li>
-                              <li>
-                                <strong>Event 방식</strong>과
-                                <strong>REST 방식</strong>이 함께 쓰이는 연동
-                                환경을 경험하면서, <strong>MSA 환경</strong>을
-                                더 깊이 이해하게 됐고,
-                                <strong>헥사고날 방식</strong>에도 흥미가 생겨
-                                개인 프로젝트에 적용해볼 수 있었습니다.
-                              </li>
-                              <li>
-                                기존 레거시 코드 리팩터링뿐 아니라 DB 스키마를
-                                <strong>PostgreSQL</strong>에서
-                                <strong>MySQL</strong>로 마이그레이션하는
-                                과정에서 ERD도 다시 그려보며,
-                                <strong>코드</strong>와
-                                <strong>스키마</strong>를 함께 다듬는 구조 개선
-                                작업을 경험했습니다.
-                              </li>
-                            </ul>
-                          </section>
-                        </div>
-
-                        <!-- 다이어그램 자리: 실제 다이어그램 이미지가 생기면 같은 위치에 넣으면 됩니다. -->
-                        <!-- <section
-                          class="project-expand-section project-expand-section-diagram"
-                        >
-                          <h4>아키텍처 다이어그램</h4>
-                          <div class="diagram-placeholder">
-                            <p class="diagram-placeholder-label">
-                              Diagram Placeholder
-                            </p>
-                            <p class="diagram-placeholder-path">
-                              예시 파일 경로:
-                              <code
-                                >assets/diagrams/soojibee2-architecture.png</code
-                              >
-                            </p>
-                            <p class="diagram-placeholder-copy">
-                              추후 Outbox, CDC, Redis, Kafka, 점검 예약 흐름과
-                              서비스 간 데이터 이동을 중심으로 정리하면 전달력이
-                              좋아집니다.
-                            </p>
-                          </div>
-                        </section> -->
-
-                        <section class="project-expand-section">
-                          <h4>Outbox Pattern 적용</h4>
-                          <ul class="project-overview-list">
-                            <li>
-                              <strong>@Transaction</strong> 블록에서
-                              <strong>OutboxEntity 저장</strong> 및
-                              <strong>OutboxEvent 생성</strong>
-                            </li>
-                            <li>
-                              <strong>@TransactionalEventListener</strong>를
-                              이용해서 Transaction이 정상적으로 종료된
-                              OutboxEvent를 수신
-                            </li>
-                            <li>
-                              OutboxEntity에서 미리 정의된
-                              <strong>eventCode</strong>와
-                              <strong>payload</strong> 등을 조회해서 정해진 동작
-                              수행
-                            </li>
-                            <li>
-                              만약 <strong>@Transaction</strong> 블록에서
-                              실패하면 <strong>Event</strong>가 발행되지 않기
-                              때문에 동작하지 않음
-                            </li>
-                          </ul>
-                        </section>
-                        <section class="project-expand-section">
-                          <h4>트러블슈팅</h4>
-                          <ul class="project-overview-list">
-                            <li>
-                              점검을 수행하는 엔진마다 이벤트 처리가 조금씩
-                              다르고,
-                              <strong>Kafka</strong>에 지속적인
-                              <strong>메모리 오류</strong> 발생 <br />→ 모든
-                              엔진의 교환 방식을 Redis에 데이터를 저장하고 그
-                              Key를 교환하는 방식으로 일관되게 정리 및 적용
-                            </li>
-                            <li>
-                              서버의 <strong>장애</strong> 등으로 서버가
-                              구동하고 있지 않을 때 <strong>예약 점검</strong>이
-                              실행되지 않는 문제 <br />→
-                              <strong>ApplicationRunner</strong>를 상속받는
-                              Component를 이용해서 다시 scheduler를 활성화하고,
-                              <br />특정 기준을 통해 예약 점검을 바로 실행하거나
-                              다음 실행 주기로 미루는 코드 구현
-                            </li>
-                          </ul>
-                        </section>
-                        <!-- <section class="project-expand-section">
-                          <h4>회고</h4>
-                          <p>
-                            
-                          </p>
-                        </section> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
               <div class="project-grid">
                 <article class="project-card project-card-featured">
                   <div class="project-header">
@@ -873,9 +878,72 @@
                 <article class="project-card project-card-featured">
                   <div class="project-header">
                     <div>
-                      <p class="project-period">
-                        2023.06 - 현재 · Side Project
+                      <p class="project-period">2024.02 - 2025.12</p>
+                      <h3>V-Portal</h3>
+                    </div>
+                    <p class="project-role">회사 업무 · Backend Developer</p>
+                  </div>
+
+                  <div class="project-overview-grid">
+                    <section class="project-overview-item is-wide">
+                      <h4>프로젝트 소개</h4>
+                      <p>
+                        LG 계열사에서 사용하고 있는
+                        <strong>점검 요청·이력 관리 서비스</strong>로, 점검을
+                        원하는 서비스의 정보를 등록하고, 점검 담당자 배정·보고서
+                        등록·이행 점검 관리를 지원하는 서비스
                       </p>
+                    </section>
+                    <section class="project-overview-item">
+                      <h4>성과</h4>
+                      <p>
+                        <strong>외부 SI 업체</strong>에서 인수받은 프로젝트를
+                        <strong>완성도 높게</strong>개발 및 안정화하고, 26년
+                        1분기에만 <strong>30건의 점검이 등록</strong>되어
+                        관리되고 있습니다.
+                      </p>
+                    </section>
+                    <section class="project-overview-item">
+                      <h4>인원</h4>
+                      <p>
+                        <strong>1인 개발</strong>로 <strong>백엔드</strong>,
+                        <strong>운영 화면 구현</strong>,
+                        <strong>DB 스키마 설계</strong>를 맡았습니다.
+                      </p>
+                    </section>
+                    <section class="project-overview-item is-wide">
+                      <h4>핵심 기능</h4>
+                      <ul class="project-overview-list">
+                        <li>
+                          <strong>SSO 연동</strong>으로 LG 계열사 사용자들의
+                          쉬운 접근 지원
+                        </li>
+                        <li>
+                          점검을 원하는 서비스의 정보를 입력하고
+                          <strong>점검 담당자</strong>가 조회할 수 있는 기능
+                        </li>
+                        <li>
+                          <strong>점검 요청</strong> ·
+                          <strong>완료 처리</strong> ·
+                          <strong>이행 점검</strong> 단계에서의 자동 메일 발신
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="chip-row" aria-label="V-Portal 기술 스택">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Oracle</span>
+                    <span>JPA</span>
+                    <span>React.js</span>
+                  </div>
+                </article>
+
+                <article class="project-card project-card-featured">
+                  <div class="project-header">
+                    <div>
+                      <p class="project-period">2023.06 - 현재</p>
                       <h3>술닥술닥</h3>
                       <div class="project-link-list is-compact">
                         <a
@@ -904,7 +972,9 @@
                         >
                       </div>
                     </div>
-                    <p class="project-role">Side Project · Backend Developer</p>
+                    <p class="project-role">
+                      사이드 프로젝트 · Backend Developer
+                    </p>
                   </div>
 
                   <div class="project-overview-grid">
@@ -1122,70 +1192,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </article>
-
-                <article class="project-card project-card-featured">
-                  <div class="project-header">
-                    <div>
-                      <p class="project-period">2024.02 - 2025.12</p>
-                      <h3>V-Portal</h3>
-                    </div>
-                    <p class="project-role">회사 업무 · Full Stack Developer</p>
-                  </div>
-
-                  <div class="project-overview-grid">
-                    <section class="project-overview-item is-wide">
-                      <h4>프로젝트 소개</h4>
-                      <p>
-                        <strong>점검 요청</strong>,
-                        <strong>담당자 배정</strong>,
-                        <strong>보고서 등록</strong>,
-                        <strong>이행 이력 관리</strong>를 지원하는 서비스입니다.
-                      </p>
-                    </section>
-                    <section class="project-overview-item">
-                      <h4>성과</h4>
-                      <p>
-                        <strong>외부 SI 업체</strong>에서 인수받은 프로젝트를
-                        <strong>운영 가능한 수준</strong>까지 안정화하고
-                        마무리했습니다.
-                      </p>
-                    </section>
-                    <section class="project-overview-item">
-                      <h4>인원</h4>
-                      <p>
-                        <strong>1인 개발</strong>로 <strong>백엔드</strong>,
-                        <strong>운영 화면 구현</strong>,
-                        <strong>DB 스키마 설계</strong>를 맡았습니다.
-                      </p>
-                    </section>
-                    <section class="project-overview-item is-wide">
-                      <h4>핵심 기능</h4>
-                      <ul class="project-overview-list">
-                        <li>
-                          <strong>SSO 연동</strong>으로 LG 계열사 사용자들의
-                          쉬운 접근 지원
-                        </li>
-                        <li>
-                          점검을 원하는 서비스의 정보를 입력하고
-                          <strong>점검 담당자</strong>가 조회할 수 있는 기능
-                        </li>
-                        <li>
-                          <strong>점검 요청</strong> ·
-                          <strong>완료 처리</strong> ·
-                          <strong>이행 점검</strong> 단계에서의 자동 메일 발신
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-
-                  <div class="chip-row" aria-label="V-Portal 기술 스택">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>Oracle</span>
-                    <span>JPA</span>
-                    <span>React.js</span>
                   </div>
                 </article>
               </div>
