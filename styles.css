@@ -841,6 +841,46 @@ button {
     );
 }
 
+.diagram-figure {
+  margin: 0;
+}
+
+.diagram-frame {
+  padding: 16px;
+  overflow-x: auto;
+  border: 1px solid #e5e3d9;
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(243, 243, 239, 0.88)
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(89, 99, 110, 0.03),
+      rgba(89, 99, 110, 0.03) 10px,
+      rgba(89, 99, 110, 0.01) 10px,
+      rgba(89, 99, 110, 0.01) 20px
+    );
+}
+
+.diagram-frame img {
+  display: block;
+  width: max(100%, 860px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.diagram-caption {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .diagram-placeholder-label {
   margin: 0;
   font-size: 0.82rem;
@@ -1023,6 +1063,10 @@ button {
 
   .core-grid {
     grid-template-columns: 1fr;
+  }
+
+  .diagram-frame {
+    padding: 12px;
   }
 
   .footer-inner {
