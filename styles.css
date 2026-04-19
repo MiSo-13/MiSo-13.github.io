@@ -171,7 +171,7 @@ button {
 
 .intro-section {
   padding-top: 48px;
-  padding-bottom: 28px;
+  padding-bottom: 56px;
 }
 
 .intro-grid {
@@ -199,9 +199,10 @@ button {
 }
 
 .intro-copy h1 {
-  max-width: 15ch;
-  font-size: clamp(2.35rem, 5vw, 4rem);
+  max-width: 18ch;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   line-height: 1.16;
+  word-break: keep-all;
 }
 
 .intro-description,
@@ -415,12 +416,12 @@ button {
 }
 
 .core-section {
-  padding-top: 0;
+  padding-top: 18px;
   padding-bottom: 36px;
 }
 
 .core-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
 }
 

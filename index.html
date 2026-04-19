@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>허재훈 | Backend Developer</title>
+    <title>허재훈 | Server Developer</title>
     <meta
       name="description"
-      content="백엔드 개발자 허재훈의 포트폴리오 입니다. 배치 자동화, 서비스 연동, 이벤트 처리 안정화 경험을 소개합니다."
+      content="정합성, 비동기 안정성, 운영 자동화를 개선해 온 서버 개발자 허재훈의 포트폴리오입니다."
     />
     <meta name="theme-color" content="#f7f7f3" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="허재훈 | Backend Developer" />
+    <meta property="og:title" content="허재훈 | Server Developer" />
     <meta
       property="og:description"
-      content="배치와 서비스 연동이 많은 환경에서 안정적인 흐름을 만드는 백엔드 개발자 허재훈의 포트폴리오입니다."
+      content="정합성, 비동기 안정성, 운영 자동화를 개선해 온 서버 개발자 허재훈의 포트폴리오입니다."
     />
     <link
       rel="stylesheet"
@@ -31,7 +31,7 @@
             aria-label="허재훈 포트폴리오 첫 화면으로 이동"
           >
             <strong>허재훈</strong>
-            <span>Backend Developer</span>
+            <span>Server Developer</span>
           </a>
 
           <button
@@ -66,22 +66,35 @@
                 Java / Spring Boot
                 <br />MSA | Batch Automation | Event-Driven Architecture
               </p>
-              <h1>정합성과 운영 안정성을<br />설계하는 백엔드 개발자</h1>
+              <h1>정합성과 안정성을 설계하는 서버 개발자</h1>
               <p class="intro-description">
-                <strong>Java / Spring Boot</strong> 기반으로 백엔드 서비스를
-                개발해 왔습니다.<br />배치 작업을
-                <strong>동적 스케줄링</strong>하고, 데이터를
-                <strong>수집·비교</strong>해 <strong>보고서 생성</strong>과
-                <strong>메일 발송</strong>까지 이어지는<br />
-                <strong>자동화</strong>하는 일을 주로 맡았습니다.
+                <strong>Java / Spring</strong> 기반으로 서버를 개발하면서, 저는
+                새로운 기능을 빠르게 추가하는 것만큼이나
+                <strong>데이터가 끝까지 올바르게 흐르는 구조</strong>를 만드는
+                일에 더 큰 가치를 두고 일해 왔습니다. 여러 시스템과 배치, 메시지
+                큐, 외부 연동이 맞물리는 환경에서는 작은 누락 하나가 장애나 운영
+                부담으로 이어지기 쉬웠고, 그래서 자연스럽게
+                <strong>정합성</strong>, <strong>비동기 안정성</strong>,
+                <strong>운영 자동화</strong>를 중심으로 문제를 풀어왔습니다.
               </p>
               <p class="intro-description">
-                서비스 간 연동이 많은 환경에서 이벤트 처리의
-                <strong>정합성</strong>과 <strong>운영 안정성</strong>을 함께
-                챙겨왔습니다. <strong>Outbox Pattern</strong>,
-                <strong>CDC</strong>, <strong>Redis</strong>를 활용해 구조를
-                안전하고 체계적으로 구성하고<br /><strong>장애를 개선</strong>
-                한 경험이 있습니다.
+                공격표면관리(ASM) 솔루션 도메인에서는 검사 요청부터 결과 적재,
+                보고서 생성, 알림 발송까지 이어지는 흐름을 공통 처리 구조로
+                정리하고, 서비스마다 흩어져 있던 책임을 다시 나누는 작업을
+                맡았습니다. 그 과정에서 <strong>Outbox Pattern</strong>,
+                <strong>CDC</strong>, <strong>Kafka</strong>,
+                <strong>Redis</strong>를 활용해 이벤트 발행 누락과 소비 지연을
+                줄였고, 요청 누락을 <strong>30% 수준에서 0건</strong>으로
+                개선하거나, 응답 대기 시간을 <strong>80% 이상</strong>
+                단축하는 결과로 연결했습니다.
+              </p>
+              <p class="intro-description">
+                또 사용자 요청 경로에 묶여 있던 무거운 후처리와 배치 작업은
+                비동기 구조로 분리하고, 상태 추적과 관리자 알림, 재시도 흐름을
+                함께 설계해 운영자가 문제를 더 빨리 발견하고 대응할 수 있게
+                만들었습니다. 단순히 "돌아가는 기능"을 만드는 데서 멈추지 않고,
+                장애가 다시 반복되지 않도록 구조를 정리하고 운영 비용이 줄어드는
+                방향까지 책임지는 개발을 지향합니다.
               </p>
 
               <div class="action-row">
@@ -102,7 +115,7 @@
               <section class="panel-card profile-card">
                 <p class="panel-title">Profile</p>
                 <h2>허재훈</h2>
-                <p class="profile-role">Backend Developer</p>
+                <p class="profile-role">Server Developer</p>
 
                 <!-- 연락처: 이메일, 전화번호, GitHub 주소를 수정할 때 함께 확인하면 됩니다. -->
                 <dl class="profile-list">
@@ -337,14 +350,16 @@
                           <section>
                             <h4>결과</h4>
                             <p>
-                              테스트 환경에서 <strong>조회 오류와 요청 유실</strong
-                              >을 <strong>0건</strong>으로 해소했고, Redis · Kafka
+                              테스트 환경에서
+                              <strong>조회 오류와 요청 유실</strong>을
+                              <strong>0건</strong>으로 해소했고, Redis · Kafka
                               기반 전달 방식으로 이슈 발생 확률을
-                              <strong>5% 미만</strong>으로 낮추며 장애 대응 시간을
+                              <strong>5% 미만</strong>으로 낮추며 장애 대응
+                              시간을
                               <strong>80% 이상</strong> 단축했습니다.<br />또한
                               CDC 기반 조회 구조 정리로 연계 조회 속도를
-                              <strong>40% 이상</strong> 개선했고, 신규 점검 단계도
-                              안정적으로 확장할 수 있게 됐습니다.
+                              <strong>40% 이상</strong> 개선했고, 신규 점검
+                              단계도 안정적으로 확장할 수 있게 됐습니다.
                             </p>
                           </section>
                           <section>
@@ -497,8 +512,8 @@
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      <strong>16개 고객사</strong>를 대상으로 주 1회 데이터 수집,
-                      비교, 보고서 생성, 메일 발송을 자동화해<br /><strong
+                      <strong>16개 고객사</strong>를 대상으로 주 1회 데이터
+                      수집, 비교, 보고서 생성, 메일 발송을 자동화해<br /><strong
                         >누적 1,000건 이상</strong
                       >의 보고서를 생성했고, Excel 보고서 생성 시간을
                       <strong>15분에서 2분 미만</strong>으로 단축했습니다.
@@ -611,14 +626,16 @@
                             <p>
                               기존 서비스에서 제한적이었던
                               <strong>데이터 비교</strong>와
-                              <strong>보고서 생성</strong>을 자동화했고, 운영팀이
-                              직접 보고서를 생성하고 관리할 수 있는 구조를
-                              마련했습니다.<br /><strong>16개 고객사</strong>를
-                              대상으로 주 1회 자동화 일정을 운영하며,
+                              <strong>보고서 생성</strong>을 자동화했고,
+                              운영팀이 직접 보고서를 생성하고 관리할 수 있는
+                              구조를 마련했습니다.<br /><strong
+                                >16개 고객사</strong
+                              >를 대상으로 주 1회 자동화 일정을 운영하며,
                               <strong>누적 1,000건 이상</strong>의 보고서를
-                              생성했고 요청당 최대 <strong>1,000개 자산</strong>과
-                              관련 서브도메인, 위협, 포트 데이터도 안정적으로
-                              처리할 수 있게 됐습니다.
+                              생성했고 요청당 최대
+                              <strong>1,000개 자산</strong>과 관련 서브도메인,
+                              위협, 포트 데이터도 안정적으로 처리할 수 있게
+                              됐습니다.
                             </p>
                           </section>
                           <section>
@@ -858,9 +875,10 @@
                                 <strong>대용량 점검 결과</strong> 저장 시
                                 <strong>개별 저장 방식</strong>으로 인한 지연과
                                 장애 위험이 있어, <strong>chunk 처리</strong>를
-                                적용해 약 <strong>700건 수준</strong>에서 발생하던
-                                저장 오류를 개선하고 <strong>1,000건 이상</strong
-                                >도 안정적으로 처리하도록 바꿨습니다.
+                                적용해 약 <strong>700건 수준</strong>에서
+                                발생하던 저장 오류를 개선하고
+                                <strong>1,000건 이상</strong>도 안정적으로
+                                처리하도록 바꿨습니다.
                               </li>
                               <li>
                                 2025년 기준 약 <strong>20개 고객사</strong>를
@@ -1078,8 +1096,8 @@
                                 앱 개발자, 디자이너, PM과 협업하며
                                 <strong>기능 우선순위</strong>,
                                 <strong>모임 상태 흐름</strong>,
-                                <strong>추천 로직</strong>을 함께 조율하며 서비스
-                                기획에도 적극적으로 참여했습니다.
+                                <strong>추천 로직</strong>을 함께 조율하며
+                                서비스 기획에도 적극적으로 참여했습니다.
                               </li>
                             </ul>
                           </section>
@@ -1098,10 +1116,10 @@
                                 <strong>20% 이상</strong> 개선했습니다.
                               </li>
                               <li>
-                                주류 상세 조회 데이터를 수집해 <strong>10분 단위
-                                관심도 지표</strong>를 설계했고, 현재까지 약
-                                <strong>405건</strong>의 유효 조회 데이터를
-                                축적했습니다.
+                                주류 상세 조회 데이터를 수집해
+                                <strong>10분 단위 관심도 지표</strong>를
+                                설계했고, 현재까지 약 <strong>405건</strong>의
+                                유효 조회 데이터를 축적했습니다.
                               </li>
                             </ul>
                           </section>
