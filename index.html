@@ -1,25 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>허재훈 | Server Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허재훈 | Backend Developer</title>
     <meta
       name="description"
-      content="정합성, 비동기 안정성, 운영 자동화를 개선해 온 서버 개발자 허재훈의 포트폴리오입니다."
-    />
-    <meta name="theme-color" content="#f7f7f3" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="허재훈 | Server Developer" />
+      content="Java/Spring 기반으로 데이터 정합성, 비동기 처리 안정성, 운영 자동화를 개선해 온 백엔드 개발자 허재훈의 포트폴리오입니다."
+    >
+    <meta name="theme-color" content="#f7f7f3">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="허재훈 | Backend Developer">
     <meta
       property="og:description"
-      content="정합성, 비동기 안정성, 운영 자동화를 개선해 온 서버 개발자 허재훈의 포트폴리오입니다."
-    />
+      content="ASM 솔루션 마이그레이션, Outbox Pattern, Kafka/Redis 기반 비동기 처리, Quartz 자동화 경험을 소개합니다."
+    >
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    >
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="site-shell">
@@ -64,37 +64,35 @@
             <div class="intro-copy">
               <p class="eyebrow">
                 Java / Spring Boot
-                <br />MSA | Batch Automation | Event-Driven Architecture
+                <br>MSA | Batch Automation | Event-Driven Architecture
               </p>
-              <h1>정합성과 안정성을 설계하는 서버 개발자</h1>
+              <h1>데이터 정합성과 비동기 안정성을<br>개선하는 백엔드 개발자</h1>
               <p class="intro-description">
-                <strong>Java / Spring</strong> 기반으로 서버를 개발하면서, 저는
-                새로운 기능을 빠르게 추가하는 것만큼이나
-                <strong>데이터가 끝까지 올바르게 흐르는 구조</strong>를 만드는
-                일에 더 큰 가치를 두고 일해 왔습니다. 여러 시스템과 배치, 메시지
-                큐, 외부 연동이 맞물리는 환경에서는 작은 누락 하나가 장애나 운영
-                부담으로 이어지기 쉬웠고, 그래서 자연스럽게
-                <strong>정합성</strong>, <strong>비동기 안정성</strong>,
-                <strong>운영 자동화</strong>를 중심으로 문제를 풀어왔습니다.
-              </p>
-              <p class="intro-description">
-                공격표면관리(ASM) 솔루션 도메인에서는 검사 요청부터 결과 적재,
-                보고서 생성, 알림 발송까지 이어지는 흐름을 공통 처리 구조로
-                정리하고, 서비스마다 흩어져 있던 책임을 다시 나누는 작업을
-                맡았습니다. 그 과정에서 <strong>Outbox Pattern</strong>,
-                <strong>CDC</strong>, <strong>Kafka</strong>,
-                <strong>Redis</strong>를 활용해 이벤트 발행 누락과 소비 지연을
-                줄였고, 요청 누락을 <strong>30% 수준에서 0건</strong>으로
-                개선하거나, 응답 대기 시간을 <strong>80% 이상</strong>
-                단축하는 결과로 연결했습니다.
+                <strong>Java / Spring Boot</strong> 기반으로 분산 서비스의
+                <strong>데이터 정합성</strong>, <strong>비동기 처리 안정성</strong>,
+                <strong>운영 자동화</strong>를 개선해 온 백엔드 개발자입니다.
+                공격표면관리(ASM) 솔루션을 운영하는 환경에서 기존
+                <strong>Python / Django</strong> 기반 서비스를
+                <strong>Java / Spring</strong> 구조로 마이그레이션하고, 서비스별로
+                달랐던 점검 요청·실행·결과 처리 흐름을 공통화하는 작업을
+                담당했습니다.
               </p>
               <p class="intro-description">
-                또 사용자 요청 경로에 묶여 있던 무거운 후처리와 배치 작업은
-                비동기 구조로 분리하고, 상태 추적과 관리자 알림, 재시도 흐름을
-                함께 설계해 운영자가 문제를 더 빨리 발견하고 대응할 수 있게
-                만들었습니다. 단순히 "돌아가는 기능"을 만드는 데서 멈추지 않고,
-                장애가 다시 반복되지 않도록 구조를 정리하고 운영 비용이 줄어드는
-                방향까지 책임지는 개발을 지향합니다.
+                MSA 환경에서 DB 저장과 <strong>Kafka</strong> 이벤트 발행 시점이
+                어긋나 발생하던 요청 유실·조회 불일치 문제를
+                <strong>Outbox Pattern</strong>으로 개선했고, 대용량 결과 데이터는
+                <strong>Redis Key</strong> 기반 전달 구조로 바꿔 payload 부담과 장애
+                대응 난이도를 낮췄습니다. 실패 데이터 재처리 API, 멱등성 보장,
+                Stack Trace 저장처럼 운영 중 문제를 다시 추적하고 복구할 수 있는
+                흐름도 함께 설계했습니다.
+              </p>
+              <p class="intro-description">
+                또한 <strong>Spring Quartz</strong> 기반으로 수집·비교·보고서
+                생성·메일 발송까지 이어지는 자동화 파이프라인을 1인 개발로
+                구현했습니다. 수작업으로 처리하던 업무를 운영 설정 기반으로
+                전환하고, 보고서 생성 병목과 대량 결과 저장 장애를 개선하며
+                실제 고객사 운영에서 반복되는 장애와 대응 시간을 줄이는 데
+                집중해 왔습니다.
               </p>
 
               <div class="action-row">
@@ -129,7 +127,7 @@
                   </div>
                   <div>
                     <dt>Phone</dt>
-                    <dd><a href="tel:+821049183701">010-4918-3701</a></dd>
+                    <dd><a href="tel:+821049183701">010&#8209;4918&#8209;3701</a></dd>
                   </div>
                   <!-- <div>
                     <dt>Focus</dt>
@@ -145,16 +143,16 @@
                   <p class="panel-title">Key Impact</p>
                   <ul class="metric-list">
                     <li>
-                      <strong>Outbox Pattern / CDC</strong>
-                      <span>이벤트 정합성과 조회 구조를 다듬은 경험</span>
+                      <strong>요청 유실 0건</strong>
+                      <span>Outbox Pattern으로 저장-발행 정합성 개선</span>
                     </li>
                     <li>
-                      <strong>Kafka / RabbitMQ</strong>
-                      <span>프로젝트에서의 이벤트 기반 서비스 경험</span>
+                      <strong>장애 대응 80% 단축</strong>
+                      <span>Kafka payload를 Redis Key 전달 구조로 개편</span>
                     </li>
                     <li>
-                      <strong>Quartz Scheduler</strong>
-                      <span>동적 스케줄링 기반 데이터 처리 경험</span>
+                      <strong>보고서 생성 85% 단축</strong>
+                      <span>Quartz 기반 자동화 파이프라인과 병목 개선</span>
                     </li>
                   </ul>
                 </div>
@@ -175,14 +173,14 @@
               <article class="info-card core-card">
                 <h3>배치 자동화</h3>
                 <p>
-                  Spring Quartz 기반으로<br />수집, 비교, 보고서 생성, 메일 발송
+                  Spring Quartz 기반으로<br>수집, 비교, 보고서 생성, 메일 발송
                   흐름을 자동화했습니다.
                 </p>
               </article>
               <article class="info-card core-card">
                 <h3>서비스 연동</h3>
                 <p>
-                  API, Gateway, Messaging을<br />함께 다루며 서비스 간 연결
+                  API, Gateway, Messaging을<br>함께 다루며 서비스 간 연결
                   지점을 안정적으로 설계하고 운영했습니다.
                 </p>
               </article>
@@ -197,7 +195,7 @@
                 <h3>운영 개선</h3>
                 <p>
                   Redis 캐시, 병목 분석, 비동기 분리를 통해 응답 시간과 운영
-                  효율을<br />함께 개선했습니다.
+                  효율을<br>함께 개선했습니다.
                 </p>
               </article>
             </div>
@@ -211,7 +209,7 @@
               <p class="eyebrow">Projects</p>
               <h2>대표 프로젝트</h2>
               <p class="section-description">
-                핵심 역량이 잘 들어나는 프로젝트 위주로 정리했습니다.
+                이력서의 핵심 성과가 잘 드러나는 프로젝트 위주로 정리했습니다.
               </p>
             </div>
 
@@ -230,54 +228,51 @@
                     <h4>프로젝트 소개</h4>
                     <p>
                       Python / Django 기반 ASM 솔루션을
-                      <strong>Java / Spring</strong> 구조로 다시 구성하면서,
-                      고객사 요청 사항을 반영한 <strong>UI/UX</strong> 개선과
-                      <strong>점검 실행 흐름</strong>,
-                      <strong>조회 구조</strong>를 함께 고도화한 프로젝트입니다.
+                      <strong>Java / Spring</strong> 기반으로 재구성하며,
+                      저장-발행 정합성, 결과 전달 구조, 서비스별로 상이한
+                      <strong>점검 흐름의 공통화</strong>를 수행한 프로젝트입니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      <strong>Outbox Pattern</strong> 도입으로 테스트 환경에서
-                      <strong>10건 중 3건 수준</strong>으로 발생하던 조회 오류와
-                      요청 유실을 <strong>0건</strong>으로 해소했고,<br />결과
-                      전달 구조를 <strong>Redis Key</strong> 기반으로 바꿔 이슈
-                      발생 확률을 <strong>5% 미만</strong>으로 낮추고 장애 대응
-                      시간을 <strong>80% 이상</strong> 단축했습니다.
+                      <strong>Outbox Pattern</strong>을 도입해
+                      <strong>요청 유실·조회 불일치</strong>를 테스트 환경 기준
+                      30%에서 0건으로 해소했고,<br>Redis Key 전달 구조로
+                      대용량 payload 부담과 장애 대응 시간을 줄였습니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
                     <h4>인원</h4>
                     <p>
                       BE 3명, FE 2명으로 진행한 프로젝트에서
-                      <strong>백엔드</strong>를 담당했습니다.
+                      <strong>저장-발행 정합성 개선</strong>, 결과 전달 구조 개편,
+                      점검 흐름 표준화를 담당했습니다.
                     </p>
                   </section>
                   <section class="project-overview-item is-wide">
                     <h4>핵심 기능</h4>
                     <ul class="project-overview-list">
                       <li>
-                        기존 SooJi.Bee 기능을 유지하면서
-                        <strong>UI/UX 개선</strong>
+                        기존 SooJi.Bee 기능을 Java / Spring 기반 구조로 전환
                       </li>
                       <li>
                         특정 <strong>CVE</strong>를 대상으로 한
                         <strong>취약점 점검</strong> 기능
                       </li>
                       <li>
-                        점검 실행 시 이미 탐지된 결과를 활용하는 옵션을 추가해
-                        <strong>체계적인 운영</strong> 지원
+                        서비스별 점검 요청·실행·결과 처리 흐름을
+                        <strong>공통 workflow/state model</strong>로 표준화
                       </li>
                       <li>
-                        자산 - 포트별 <strong>상세 위협 생성</strong> 및 처리
-                        기능
+                        처리 실패 데이터 재처리 API와 멱등성 보장, 분석용 Stack
+                        Trace 저장
                       </li>
                     </ul>
                   </section>
                 </div>
 
-                <div class="chip-row" aria-label="SooJi.Bee 2.0 기술 스택">
+                <div class="chip-row">
                   <span>Java</span>
                   <span>Spring Boot</span>
                   <span>Spring Cloud Gateway</span>
@@ -321,45 +316,35 @@
                             <h4>문제</h4>
                             <p>
                               <strong>점검 요청 저장</strong>과
-                              <strong>Kafka 이벤트 발행</strong> 상태가
-                              어긋나면서 <strong>조회 오류</strong>가 발생하거나
-                              <strong>요청 누락</strong> 문제가 있었습니다.<br />
-                              점검 결과 처리도 <strong>대용량 데이터</strong>를
-                              Kafka payload에 직접 담는 구조라 메모리 이슈와
-                              네트워크 장애 대응 부담이 컸고,<br />서비스별 DB가
-                              분리된 환경이라 연계 조회 구조도 복잡했습니다.
+                              <strong>Kafka 이벤트 발행</strong> 시점이 어긋나,
+                              Topic을 수신한 서비스가 아직 commit되지 않은 데이터를
+                              조회하려다 오류가 발생했습니다.<br>점검 결과 처리도
+                              대용량 데이터를 Kafka body에 직접 담는 구조라 메모리
+                              이슈가 반복됐고, 엔진별 결과 전달 방식이 달라 장애
+                              분석과 재처리가 어려웠습니다.
                             </p>
                           </section>
                           <section>
                             <h4>해결</h4>
                             <p>
-                              <strong>Outbox Pattern</strong>을 도입해 점검 요청
-                              저장과 이벤트 발행을
-                              <strong>하나의 트랜잭션</strong>으로 묶어
-                              <strong>데이터 일관성</strong>과 장애 대응
-                              가능성을 높였습니다.<br />점검 결과의 연동 방식도
-                              Core 서비스가 <strong>Redis Key</strong>를
-                              기준으로 요청과 결과를 주고받도록 전달 구조를
-                              변경했고, <strong>CDC</strong>를 적용해 서비스별로
-                              분리된 데이터를 조회 가능한 형태로 동기화했습니다.
-                              <br />또한 기존 흐름을 표준화해 신규 점검 단계
-                              <strong>2개를 안정적으로 추가</strong>할 수 있도록
-                              구조를 정리했습니다.
+                              Polling 기반 <strong>Outbox Pattern</strong>을
+                              도입해 점검 요청 저장과 이벤트 발행의 정합성을
+                              확보했습니다.<br>결과 전달은 Redis에 payload를
+                              저장하고 Kafka로 Key만 전달하는 구조로 바꿨고, 실패
+                              데이터는 운영용 API로 재처리할 수 있도록
+                              <strong>멱등성</strong>과 Stack Trace 저장을 함께
+                              설계했습니다.
                             </p>
                           </section>
                           <section>
                             <h4>결과</h4>
                             <p>
-                              테스트 환경에서
-                              <strong>조회 오류와 요청 유실</strong>을
-                              <strong>0건</strong>으로 해소했고, Redis · Kafka
-                              기반 전달 방식으로 이슈 발생 확률을
-                              <strong>5% 미만</strong>으로 낮추며 장애 대응
-                              시간을
-                              <strong>80% 이상</strong> 단축했습니다.<br />또한
-                              CDC 기반 조회 구조 정리로 연계 조회 속도를
-                              <strong>40% 이상</strong> 개선했고, 신규 점검
-                              단계도 안정적으로 확장할 수 있게 됐습니다.
+                              요청 유실·조회 불일치 문제를 테스트 환경 기준
+                              <strong>30%에서 0건</strong>으로 해소했습니다.<br>
+                              Redis Key 전달 구조로 payload 부담을 줄여 관련 이슈를
+                              <strong>5% 미만</strong>으로 낮췄고, 공통
+                              workflow/state model 적용으로
+                              <strong>신규 점검 단계 2개</strong>를 확장했습니다.
                             </p>
                           </section>
                           <section>
@@ -374,7 +359,7 @@
                               <li>
                                 Kafka 메모리 이슈를 해결하는 과정에서
                                 <strong>Sequence Diagram</strong>으로 레거시
-                                흐름을 다시 정리해보며,<br />구조를 새로
+                                흐름을 다시 정리해보며,<br>구조를 새로
                                 그려보는 작업이 서비스 이해도와 개선 방향을
                                 정리하는 데 도움이 됐습니다.
                               </li>
@@ -384,13 +369,13 @@
                                 환경을 경험하면서, <strong>MSA 환경</strong>을
                                 더 깊이 이해하게 됐고,
                                 <strong>헥사고날 방식</strong>에도 흥미가 생겨
-                                <br />개인 프로젝트에 적용해볼 수 있었습니다.
+                                <br>개인 프로젝트에 적용해볼 수 있었습니다.
                               </li>
                               <li>
                                 기존 레거시 코드 리팩터링뿐 아니라 DB 스키마를
                                 <strong>PostgreSQL</strong>에서
                                 <strong>MySQL</strong>로 마이그레이션하는
-                                과정에서 ERD도 다시 그려보며, <br /><strong
+                                과정에서 ERD도 다시 그려보며, <br><strong
                                   >코드</strong
                                 >와 <strong>스키마</strong>를 함께 다듬는 구조
                                 개선 작업을 경험했습니다.
@@ -461,17 +446,17 @@
                               점검을 수행하는 엔진마다 이벤트 처리가 조금씩
                               다르고,
                               <strong>Kafka</strong>에 지속적인
-                              <strong>메모리 오류</strong> 발생 <br />→ 모든
+                              <strong>메모리 오류</strong> 발생 <br>→ 모든
                               엔진의 교환 방식을 Redis에 데이터를 저장하고 그
                               Key를 교환하는 방식으로 일관되게 정리 및 적용
                             </li>
                             <li>
                               서버의 <strong>장애</strong> 등으로 서버가
                               구동하고 있지 않을 때 <strong>예약 점검</strong>이
-                              실행되지 않는 문제 <br />→
+                              실행되지 않는 문제 <br>→
                               <strong>ApplicationRunner</strong>를 상속받는
                               Component를 이용해서 다시 scheduler를 활성화하고,
-                              <br />특정 기준을 통해 예약 점검을 바로 실행하거나
+                              <br>특정 기준을 통해 예약 점검을 바로 실행하거나
                               다음 실행 주기로 미루는 코드 구현
                             </li>
                           </ul>
@@ -503,7 +488,7 @@
                     <p>
                       공격표면관리(ASM) 솔루션인 <strong>SooJi.Bee</strong>의
                       결과 데이터를
-                      <strong>주기적으로 수집·비교</strong>하고,<br />
+                      <strong>주기적으로 수집·비교</strong>하고,<br>
                       <strong>정기 보고서 생성</strong> 및
                       <strong>데이터 요약·비교 메일 발송</strong>을 자동화하는
                       서비스입니다.
@@ -512,11 +497,9 @@
                   <section class="project-overview-item">
                     <h4>성과</h4>
                     <p>
-                      <strong>16개 고객사</strong>를 대상으로 주 1회 데이터
-                      수집, 비교, 보고서 생성, 메일 발송을 자동화해<br /><strong
-                        >누적 1,000건 이상</strong
-                      >의 보고서를 생성했고, Excel 보고서 생성 시간을
-                      <strong>15분에서 2분 미만</strong>으로 단축했습니다.
+                      현재 <strong>16개 고객사</strong> 대상 주간 발송을 운영하고,
+                      누적 <strong>1,000개 이상</strong> 보고서를 생성했습니다.<br>
+                      Excel 보고서 생성 시간도 <strong>85% 이상</strong> 단축했습니다.
                     </p>
                   </section>
                   <section class="project-overview-item">
@@ -524,7 +507,8 @@
                     <p>
                       <strong>1인 개발</strong>로 <strong>백엔드</strong>,
                       <strong>운영 화면</strong>,
-                      <strong>DB 스키마 설계</strong>를 맡았습니다.
+                      <strong>DB 스키마 설계</strong>, 운영 유지보수 전반을
+                      담당했습니다.
                     </p>
                   </section>
                   <section class="project-overview-item is-wide">
@@ -552,7 +536,7 @@
                   </section>
                 </div>
 
-                <div class="chip-row" aria-label="Beekeeper 기술 스택">
+                <div class="chip-row">
                   <span>Java</span>
                   <span>Spring Boot</span>
                   <span>Spring Quartz</span>
@@ -595,12 +579,12 @@
                             <p>
                               고객사별 점검 이력과 결과 데이터를 비교해 변화
                               내용을 파악하고, 이를 바탕으로 보고서 생성과 메일
-                              발송까지 처리할 수 있는 기능이 필요했습니다.<br />
+                              발송까지 처리할 수 있는 기능이 필요했습니다.<br>
                               하지만 기존 솔루션에는
                               <strong>데이터 비교</strong>와
                               <strong>보고서 생성</strong> 기능이 제한적이어서
                               운영팀이 반복적인 데이터 비교와 메일 발송 업무를
-                              <strong>수작업</strong>으로 처리해야 했고,<br />이에
+                              <strong>수작업</strong>으로 처리해야 했고,<br>이에
                               따라 고객사 요청에 대응하는 시간도 지연될 수밖에
                               없었습니다.
                             </p>
@@ -611,11 +595,11 @@
                               추가 개발이 필요한 기능을
                               <strong>멀티 모듈 서비스</strong>로 분리하고, 공통
                               모듈을 정리해 <strong>중복 로직</strong>을
-                              최소화했습니다.<br />또한
+                              최소화했습니다.<br>또한
                               <strong>API Server</strong>와
                               <strong>Batch Server</strong>를 분리해 오래 걸리는
                               보고서 생성 작업을
-                              <strong>비동기 처리</strong>하고,<br />
+                              <strong>비동기 처리</strong>하고,<br>
                               동적 스케줄링을 적용해 데이터 수집 · 비교 · 보고서
                               생성 · 메일 발송까지
                               <strong>자동화</strong>했습니다.
@@ -624,18 +608,13 @@
                           <section>
                             <h4>결과</h4>
                             <p>
-                              기존 서비스에서 제한적이었던
-                              <strong>데이터 비교</strong>와
-                              <strong>보고서 생성</strong>을 자동화했고,
-                              운영팀이 직접 보고서를 생성하고 관리할 수 있는
-                              구조를 마련했습니다.<br /><strong
-                                >16개 고객사</strong
-                              >를 대상으로 주 1회 자동화 일정을 운영하며,
-                              <strong>누적 1,000건 이상</strong>의 보고서를
-                              생성했고 요청당 최대
-                              <strong>1,000개 자산</strong>과 관련 서브도메인,
-                              위협, 포트 데이터도 안정적으로 처리할 수 있게
-                              됐습니다.
+                              수작업이던 데이터 수집·비교, 보고서 생성, 메일 발송을
+                              공통 자동화 파이프라인으로 전환했습니다.<br>현재
+                              <strong>16개 고객사</strong> 대상으로 주간 발송을
+                              운영하고, 누적 <strong>1,000개 이상</strong> 보고서를
+                              생성했습니다. 단계별 실행 상태와 실패 이력을 추적해
+                              파이프라인 실패 인지·대응 시간도
+                              <strong>30% 단축</strong>했습니다.
                             </p>
                           </section>
                           <section>
@@ -645,7 +624,7 @@
                                 사내 MSA 구조에서 <strong>별도 서비스</strong>를
                                 구현하며, <strong>서비스 분리</strong>와
                                 <strong>연동 구조</strong>를 직접 다뤄볼 수
-                                있었습니다.<br />이 과정에서 정확한
+                                있었습니다.<br>이 과정에서 정확한
                                 <strong>도메인 분리</strong>와
                                 <strong>확장성</strong>,
                                 <strong>운영성</strong>을 고려해 성공적으로
@@ -653,7 +632,7 @@
                               </li>
                               <li>
                                 오래 걸리거나 비동기로 진행되는 작업은
-                                <strong>요청 흐름</strong>에서 분리하고,<br />
+                                <strong>요청 흐름</strong>에서 분리하고,<br>
                                 <strong>Batch Server</strong>에서 처리해서
                                 <strong>응답성</strong>과
                                 <strong>유지보수 효율</strong>을 함께 챙길 수
@@ -663,13 +642,13 @@
                                 대용량 데이터를 다루는 기능에서는
                                 저장·비교·보고서 생성 전 과정에서
                                 <strong>병목 지점</strong>을 구체적으로 확인해야
-                                했고,<br /><strong>연동 구조</strong>를 검토하고
+                                했고,<br><strong>연동 구조</strong>를 검토하고
                                 적절한 <strong>디자인 패턴</strong>을 적용하는
                                 과정이 성능 개선에 직접적인 도움이 됐습니다.
                               </li>
                               <li>
                                 실제 운영에서 사용하는 보고서와 메일 발송 기능은
-                                기능 구현 자체도 중요하지만,<br /><strong
+                                기능 구현 자체도 중요하지만,<br><strong
                                   >장애 대응</strong
                                 >(실패 알림 및 재시도 로직)과 같은 지속적인
                                 최적화가 안정성에 더 큰 영향을 준다는 것을
@@ -705,31 +684,36 @@
                           <h4>트러블슈팅</h4>
                           <ul class="project-overview-list">
                             <li>
-                              Excel 보고서 생성 시 <strong>15분 정도</strong>가
-                              소요되는 현상 발견 <br />→
+                              Excel 보고서 생성 시 <strong>10분 이상</strong>이
+                              걸리는 현상 발견 <br>→
                               <strong>Cell Style</strong> 처리에서 문제가
-                              발생하는 것을 파악하고, <br /><strong
+                              발생하는 것을 파악하고, <br><strong
                                 >Singleton Pattern</strong
-                              >을 적용해 동일한 Style이 반복 생성되지 않도록
-                              구조를 개선하여 <strong>15분 수준</strong>이던
-                              작업을 <strong>2분 미만</strong>으로 단축
+                              >을 적용해 동일한 Style 객체를 재사용하도록 개선하여
+                              <strong>2분 미만</strong>으로 단축
                             </li>
                             <li>
                               API 요청이나 보고서 생성 중 오류가 발생했을 때
-                              <strong>즉각적인 대응</strong>이 어려움 <br />→
+                              <strong>즉각적인 대응</strong>이 어려움 <br>→
                               실패 시 관리자 메일로 <strong>오류 내용</strong>을
                               발송하고, <strong>재시도</strong>가 가능하도록
-                              구현해 운영 중 장애 대응과 불편함 최소화
+                              구현해 파이프라인 실패 인지·대응 시간을
+                              <strong>30% 단축</strong>
                             </li>
                             <li>
                               대용량 데이터 조회 및 비교 시
                               <strong>지연</strong>
                               발생
-                              <br />→ <strong>INDEX</strong> 활용 및
+                              <br>→ <strong>INDEX</strong> 활용 및
                               <strong>캐싱</strong>으로 조회 시간 단축 (<strong
                                 >30초 → 2초</strong
-                              >) <br />→ DB 조회보다 코드 집계가 더 빠르다고
+                              >) <br>→ DB 조회보다 코드 집계가 더 빠르다고
                               판단되는 부분은 리팩터링
+                            </li>
+                            <li>
+                              스케줄 주기, 고객사 대상, 수신자, 발송 여부를 코드
+                              배포 없이 바꿀 수 있도록 운영 설정화 <br>→ 운영팀의
+                              조치 시간을 <strong>80% 이상</strong> 감축
                             </li>
                           </ul>
                         </section>
@@ -739,13 +723,13 @@
                             설계 초기에 요구사항 규모와 복잡도를 고려했을 때,
                             <strong>Spring Batch</strong>보다
                             <strong>Quartz</strong>의 단순한 메서드 호출 방식이
-                            적절하다고 판단했습니다. <br />실제로
+                            적절하다고 판단했습니다. <br>실제로
                             <strong>오류 트래킹</strong>,
                             <strong>실패 알림</strong>,
                             <strong>재시도 로직</strong>
                             등을 직접 구성해 운영할 수 있었지만, 돌아보면 배치
                             실행 단위의 상태 관리와 재처리 흐름, 모니터링을
-                            <br />더 표준화된 방식으로 가져가기 위해
+                            <br>더 표준화된 방식으로 가져가기 위해
                             <strong>Spring Batch</strong>를 적용했다면 운영
                             안정성을 더 높일 수 있었겠다는 생각을 하게
                             되었습니다.
@@ -789,12 +773,13 @@
                     <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
-                        <strong>DB 연결 검증</strong> 로직 도입 후 동일 원인으로
-                        반복되던 점검 누락 장애의 <strong>재발 0건</strong>을
-                        유지했고,<br /><strong>chunk 처리</strong>를 적용해 약
-                        <strong>700건 수준</strong>에서 발생하던 저장 오류를
-                        개선하며 <strong>1,000건 이상</strong>도 안정적으로
-                        처리할 수 있게 했습니다.
+                        <strong>polling 방식</strong>의 예약 점검 실행 로직에
+                        <strong>DB 연결 검증</strong>을 추가하여 네트워크 장애
+                        시 대응할 수 있도록 개선했고,<br><strong
+                          >200건 단위 Chunk 저장</strong
+                        >
+                        구조를 적용해 1,000건 이상 결과 처리 안정성과
+                        <strong>장애 재발 0건</strong>을 유지했습니다.
                       </p>
                     </section>
                     <section class="project-overview-item">
@@ -823,11 +808,15 @@
                           자산에 대한 <strong>위협 자동 생성</strong> 및 상태
                           변경을 통한 효율적인 운영
                         </li>
+                        <li>
+                          약 <strong>20개 고객사</strong> 운영과 2026년 4월 기준
+                          신규 기능 <strong>8개</strong> 추가
+                        </li>
                       </ul>
                     </section>
                   </div>
 
-                  <div class="chip-row" aria-label="SooJi.Bee 기술 스택">
+                  <div class="chip-row">
                     <span>Python</span>
                     <span>Django</span>
                     <span>Spring Cloud Gateway</span>
@@ -868,17 +857,14 @@
                                 예약 점검 실행 시
                                 <strong>DB 연결 오류</strong>로 점검이 누락될 수
                                 있어, <strong>DB 연결 검증</strong>을 추가해
-                                동일 원인으로 반복되던 점검 누락 장애를 해소하고
-                                <strong>재발 0건</strong>을 유지했습니다.
+                                동일 원인의 점검 누락 장애 재발을
+                                <strong>0건</strong>으로 유지했습니다.
                               </li>
                               <li>
                                 <strong>대용량 점검 결과</strong> 저장 시
-                                <strong>개별 저장 방식</strong>으로 인한 지연과
-                                장애 위험이 있어, <strong>chunk 처리</strong>를
-                                적용해 약 <strong>700건 수준</strong>에서
-                                발생하던 저장 오류를 개선하고
-                                <strong>1,000건 이상</strong>도 안정적으로
-                                처리하도록 바꿨습니다.
+                                단일 트랜잭션에 저장이 집중되어 장애 위험이 있어,
+                                <strong>200건 단위 Chunk 저장</strong>으로 변경해
+                                1,000건 이상 결과 처리 안정성을 확보했습니다.
                               </li>
                               <li>
                                 2025년 기준 약 <strong>20개 고객사</strong>를
@@ -950,7 +936,7 @@
                     </section>
                   </div>
 
-                  <div class="chip-row" aria-label="V-Portal 기술 스택">
+                  <div class="chip-row">
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>Oracle</span>
@@ -1009,7 +995,7 @@
                     <section class="project-overview-item">
                       <h4>성과</h4>
                       <p>
-                        2025년 10월에 <strong>정식 출시</strong>하였고,<br />
+                        iOS / Android 앱을 배포했고,<br>
                         <strong>iOS</strong>와 <strong>Android</strong> 앱에서
                         약 <strong>60명</strong>의 사용자와
                         <strong>312개</strong>의 술 데이터를 확보했으며,
@@ -1020,8 +1006,8 @@
                     <section class="project-overview-item">
                       <h4>인원</h4>
                       <p>
-                        총 11명 규모 프로젝트에서 <strong>백엔드 개발</strong>을
-                        담당했습니다.
+                        총 11명 규모 프로젝트에서 <strong>1인 백엔드 개발</strong>,
+                        기능 구현, 스키마 설계, 서비스 기획을 담당했습니다.
                       </p>
                     </section>
                     <section class="project-overview-item is-wide">
@@ -1032,18 +1018,18 @@
                           <strong>자동 추천</strong> 기능
                         </li>
                         <li>
-                          모임 참여 기록을 기반으로 관심 분야의
-                          <strong>모임 추천</strong> 기능
+                          Firebase Cloud Messaging 기반 앱 푸시 알림과 자체
+                          회원가입·OAuth2 소셜 로그인
                         </li>
                         <li>
-                          술 데이터 입력과 푸시 알림 수정을 위한
-                          <strong>Back Office</strong> 기능 설계
+                          조회 빈도가 높은 주류 목록·상세 조회에
+                          <strong>Redis 캐싱</strong> 적용
                         </li>
                       </ul>
                     </section>
                   </div>
 
-                  <div class="chip-row" aria-label="술닥술닥 기술 스택">
+                  <div class="chip-row">
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>Spring Quartz</span>
@@ -1084,7 +1070,7 @@
                             <ul class="project-overview-list">
                               <li>
                                 <strong>총 11명 규모</strong>로 진행한 사이드
-                                프로젝트입니다. <br />BE 1 · FE 3 · App 2 ·
+                                프로젝트입니다. <br>BE 1 · FE 3 · App 2 ·
                                 Infra 1 · PM 1 · Marketing 1 · UI/UX 1 · BI/BX 1
                               </li>
                               <li>
@@ -1139,6 +1125,11 @@
                                 배포는 현재 <strong>Jenkins</strong> 기반으로
                                 진행하고 있습니다.
                               </li>
+                              <li>
+                                Polling 기반 Outbox Pattern을 도입해 이벤트 처리와
+                                DB 정합성을 개선하고, Batch 프로세스가 실패 이벤트를
+                                주기적으로 재시도하도록 구성했습니다.
+                              </li>
                             </ul>
                           </section>
 
@@ -1185,11 +1176,11 @@
                                 <img
                                   src="assets/diagrams/suldak-platform.drawio.svg"
                                   alt="술닥술닥 서버 구성도"
-                                />
+                                >
                               </div>
                               <figcaption class="diagram-caption">
                                 술닥술닥의 서버 배포 및 각 서버의 통신을 간단히
-                                나타낸 구성도 입니다.<br />현재에는 Nginx가
+                                나타낸 구성도 입니다.<br>현재에는 Nginx가
                                 Gateway 역할도 같이 수행하고 있습니다.
                               </figcaption>
                             </figure>
@@ -1204,11 +1195,11 @@
                                   <img
                                     src="assets/screenshots/suldak/suldak-home.jpg"
                                     alt="술닥술닥_메인페이지"
-                                  />
+                                  >
                                   <img
                                     src="assets/screenshots/suldak/recommand_liquor.jpg"
                                     alt="술닥술닥_술_추천"
-                                  />
+                                  >
                                 </div>
                                 <figcaption class="project-shot-meta">
                                   메인 화면
@@ -1219,15 +1210,15 @@
                                   <img
                                     src="assets/screenshots/suldak/search_liquor_1.jpg"
                                     alt="술닥술닥_술_검색_1"
-                                  />
+                                  >
                                   <img
                                     src="assets/screenshots/suldak/search_liquor_2.jpg"
                                     alt="술닥술닥_술_검색_2"
-                                  />
+                                  >
                                   <img
                                     src="assets/screenshots/suldak/liquor_detail.jpg"
                                     alt="술닥술닥_술_상세_조회"
-                                  />
+                                  >
                                 </div>
                                 <figcaption class="project-shot-meta">
                                   술 조회 화면
@@ -1238,11 +1229,11 @@
                                   <img
                                     src="assets/screenshots/suldak/party_home.jpg"
                                     alt="술닥술닥_모임_목록_조회"
-                                  />
+                                  >
                                   <img
                                     src="assets/screenshots/suldak/party_detail.jpg"
                                     alt="술닥술닥_모임_상세_조회"
-                                  />
+                                  >
                                 </div>
                                 <figcaption class="project-shot-meta">
                                   모임 조회 화면
@@ -1357,10 +1348,9 @@
                 <div class="timeline-content">
                   <h3>인더포레스트 · 개발팀 · 주임</h3>
                   <p>
-                    공격표면관리(ASM) 솔루션인 SooJi.Bee와 취약점 진단 서비스를
-                    제공하는 회사에서 Java / Spring 기반 신규 서비스 개발과<br />
-                    마이그레이션, Python / Django 기반 운영 서비스 유지보수를
-                    함께 담당하고 있습니다.
+                    공격표면관리(ASM) 솔루션인 SooJi.Bee를 운영하며 Java / Spring
+                    기반 마이그레이션과 고도화, Python / Django 기반 레거시 운영,
+                    비동기 처리 안정화와 보고서 자동화 서비스를 담당하고 있습니다.
                   </p>
                 </div>
               </article>
@@ -1370,8 +1360,8 @@
                   <h3>퓨처로봇 · 하드웨어팀 · 사원</h3>
                   <p>
                     서비스 로봇을 제작·납품하는 회사에서 로봇 조립과 납품, QA 및
-                    유지보수 업무를 담당했고, 납품한 업체 관리도 함께
-                    담당하였습니다.
+                    유지보수, 납품처 운영 관리를 담당했고, 안내 로봇 화면에
+                    표시되는 Vanilla JS 기반 콘텐츠도 제작했습니다.
                   </p>
                 </div>
               </article>
