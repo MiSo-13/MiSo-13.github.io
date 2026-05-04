@@ -1030,15 +1030,15 @@ img {
 
 @media (min-width: 1440px) {
   :root {
-    --max-width: 1280px;
+    --max-width: 1180px;
   }
 
   .container {
-    width: min(calc(100% - 144px), var(--max-width));
+    width: min(calc(100% - 240px), var(--max-width));
   }
 
   .section {
-    padding: 104px 0;
+    padding: 96px 0;
   }
 
   .intro-section {
@@ -1051,12 +1051,12 @@ img {
 
   .intro-grid {
     grid-template-columns: minmax(0, 1.7fr) minmax(360px, 0.8fr);
-    gap: 80px;
+    gap: 72px;
   }
 
   .intro-copy h1 {
-    max-width: 840px;
-    font-size: 3.55rem;
+    max-width: 780px;
+    font-size: 3.4rem;
     line-height: 1.06;
   }
 
@@ -1095,7 +1095,7 @@ img {
   }
 
   .project-card h3 {
-    font-size: 2.25rem;
+    font-size: 2.12rem;
   }
 
   .project-overview-grid {
@@ -1123,19 +1123,19 @@ img {
 
 @media (min-width: 1800px) {
   :root {
-    --max-width: 1360px;
+    --max-width: 1240px;
   }
 
   .container {
-    width: min(calc(100% - 192px), var(--max-width));
+    width: min(calc(100% - 320px), var(--max-width));
   }
 
   .intro-grid {
-    gap: 96px;
+    gap: 84px;
   }
 
   .intro-copy h1 {
-    font-size: 3.8rem;
+    font-size: 3.55rem;
   }
 }
 
