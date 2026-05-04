@@ -4,6 +4,7 @@ const portfolioConfig = {
   githubLabel: "GitHub"
 };
 
+<<<<<<< Updated upstream
 const sectionIds = [
   "intro",
   "core",
@@ -13,11 +14,16 @@ const sectionIds = [
   "education",
   "certification"
 ];
+=======
+const sectionIds = ["intro", "projects", "skills", "career"];
+>>>>>>> Stashed changes
 
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
-const navLinks = [...document.querySelectorAll(".site-nav a")];
+const navLinks = [
+  ...document.querySelectorAll('.site-nav a[href^="#"]')
+];
 const copyEmailButton = document.getElementById("copy-email");
 const githubLink = document.querySelector("[data-github-link]");
 const currentYear = document.getElementById("current-year");

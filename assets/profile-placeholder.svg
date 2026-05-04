@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Heo Jae Hoon profile placeholder</title>
+  <desc id="desc">Minimal blue and off-white profile placeholder with HJH initials.</desc>
+  <rect width="640" height="640" rx="32" fill="#FAF9F5"/>
+  <path d="M88 552 552 88v464H88Z" fill="#EAF2FF"/>
+  <circle cx="320" cy="250" r="94" fill="#0066FF" opacity=".92"/>
+  <path d="M166 552c20-92 82-146 154-146s134 54 154 146H166Z" fill="#0066FF" opacity=".92"/>
+  <text x="320" y="598" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" fill="#111111">HJH</text>
+</svg>
