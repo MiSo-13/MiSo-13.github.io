@@ -4,19 +4,7 @@ const portfolioConfig = {
   githubLabel: "GitHub"
 };
 
-<<<<<<< Updated upstream
-const sectionIds = [
-  "intro",
-  "core",
-  "projects",
-  "skills",
-  "career",
-  "education",
-  "certification"
-];
-=======
 const sectionIds = ["intro", "projects", "skills", "career"];
->>>>>>> Stashed changes
 
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
